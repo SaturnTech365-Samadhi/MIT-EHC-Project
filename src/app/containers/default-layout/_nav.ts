@@ -3,18 +3,18 @@ import { INavData } from '@coreui/angular';
 export const navItems: INavData[] = [
   {
     name: 'Public',
-    url: '/public/view',
-    iconComponent: { name: 'cil-drop' }
-  }
-  // {
-  //   name: 'Dashboard',
-  //   url: '/dashboard',
-  //   iconComponent: { name: 'cil-speedometer' },
-  //   badge: {
-  //     color: 'info',
-  //     text: 'NEW'
-  //   }
-  // },
+    url: '/public',
+    iconComponent: { name: 'cil-spa' }
+  },
+  {
+    name: 'Dashboard',
+    url: '/dashboard',
+    iconComponent: { name: 'cil-speedometer' },
+    // badge: {
+    //   color: 'info',
+    //   text: 'NEW'
+    // }
+  },
   // {
   //   title: true,
   //   name: 'Theme'
@@ -24,12 +24,11 @@ export const navItems: INavData[] = [
   //   url: '/theme/colors',
   //   iconComponent: { name: 'cil-drop' }
   // },
-  // {
-  //   name: 'Typography',
-  //   url: '/theme/typography',
-  //   linkProps: { fragment: 'someAnchor' },
-  //   iconComponent: { name: 'cil-pencil' }
-  // },
+  {
+    name: 'Login',
+    url: '/login',
+    iconComponent: { name: 'cil-pencil' }
+  },
   // {
   //   name: 'Components',
   //   title: true
