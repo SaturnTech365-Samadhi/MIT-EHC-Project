@@ -1,0 +1,137 @@
+<c-row ngPreserveWhitespaces>
+    <c-col xs="12">
+        <c-card class="mb-4">
+            <c-card-header class="horizontalHeader">
+                <c-col md="2">
+                    <span>Project Manager</span>
+                </c-col>
+                <c-col md="8"></c-col>
+                <c-col md="2" title="Status">
+                    <span>Status</span>
+                </c-col>
+            </c-card-header>
+
+            <c-card-body>
+                <form cForm class="row g-3 needs-validation">
+                    <c-col md="12">
+                        <table [hover]="true" cTable [responsive]="true">
+                            <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col">Project Name </th>
+                                    <th scope="col">Task</th>
+                                    <th scope="col">Time Type</th>
+                                    <th scope="col">Mon, 20 </th>
+                                    <th scope="col">Tue, 21 </th>
+                                    <th scope="col">Wed, 22 </th>
+                                    <th scope="col">Thu, 23 </th>
+                                    <th scope="col">Fri, 24</th>
+                                    <th scope="col">Sat, 25</th>
+                                    <th scope="col">Sun, 26</th>
+                                    <th scope="col">Total</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <label cLabel for="validationTotal">Total</label>
+                                    </td>
+                                    <td>
+                                        <select cSelect id="" name="">
+                                            <option>
+
+                                            </option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select cSelect id="" name="">
+                                            <option>
+
+                                            </option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select cSelect id="" name="">
+                                            <option>
+
+                                            </option>
+                                        </select>
+                                    </td>
+                                    <td (click)="toggleTimeSlot()">
+                                        <input cFormControl id="" />
+                                    </td>
+                                    <td (click)="toggleTimeSlot()">
+                                        <input cFormControl id="" />
+                                    </td>
+                                    <td (click)="toggleTimeSlot()">
+                                        <input cFormControl id="" />
+                                    </td>
+                                    <td (click)="toggleTimeSlot()">
+                                        <input cFormControl id="" />
+                                    </td>
+                                    <td (click)="toggleTimeSlot()">
+                                        <input cFormControl id="" />
+                                    </td>
+                                    <td (click)="toggleTimeSlot()">
+                                        <input cFormControl id="" />
+                                    </td>
+                                    <td (click)="toggleTimeSlot()">
+                                        <input cFormControl id="" />
+                                    </td>
+                                    <td></td>
+                                    <td> <button [disabled]="false" cButton class="" size="sm">
+                                            Delete
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <c-col md="12">
+                            <c-modal id="timeSlotModal" [visible]="visible"
+                                (visibleChange)="handleTimeSlotChange($event)">
+                                <c-modal-header>
+                                    <h5 cModalTitle>Timeslot</h5>
+                                    <button (click)="toggleTimeSlot()" cButtonClose></button>
+                                </c-modal-header>
+                                <c-modal-body>
+                                    <form>
+                                        <div class="">
+                                            <label cLabel for="">Hours</label>
+                                            <input cFormControl id="" />
+                                        </div>
+                                        <div class="">
+                                            <label for="message-text" class="">Comment:</label>
+                                            <textarea class="form-control" id="message-text"></textarea>
+                                        </div>
+                                    </form>
+                                </c-modal-body>
+                                <c-modal-footer>
+                                    <button (click)="toggleTimeSlot()" cButton color="secondary">
+                                        Close
+                                    </button>
+                                    <button cButton color="primary">Submit</button>
+                                </c-modal-footer>
+                            </c-modal>
+                        </c-col>
+                        <div class="height-spacing"></div>
+                        <button [disabled]="false" cButton class="" size="sm">
+                            Add Raw
+                        </button>
+                    </c-col>
+                    <div class="height-spacing"></div>
+                    <c-col [md]="5">
+                        <button cButton class="" color="primary" type="submit">
+                            Save
+                        </button>
+                        <button cButton color="secondary" type="reset">
+                            Submit
+                        </button>
+                    </c-col>
+                    <c-col [md]="7"></c-col>
+                </form>
+            </c-card-body>
+        </c-card>
+    </c-col>
+</c-row>

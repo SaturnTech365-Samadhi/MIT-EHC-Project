@@ -1,0 +1,59 @@
+<div class="bg-light min-vh-100 d-flex flex-row align-items-center">
+  <c-container>
+    <c-row class="justify-content-center">
+      <c-col md="8">
+        <c-card-group>
+          <c-card class="p-4">
+            <c-card-body>
+              <form cForm #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+                <h1>Login</h1>
+                <p class="text-medium-emphasis">Sign In to your account</p>
+                <c-input-group class="mb-3">
+                  <span cInputGroupText>
+                    <svg cIcon name="cilUser"></svg>
+                  </span>
+                  <input cFormControl placeholder="example@codegen.co.nz" name="email" ngModel />
+                </c-input-group>
+                <c-input-group class="mb-4">
+                  <div class="input-group col-6 mx-auto">
+                    <span cInputGroupText>
+                      <svg cIcon name="cilLockLocked"></svg>
+                    </span>
+                    <input cFormControl type="password" name="password" [type]="showPassword ? 'text' : 'password'"
+                      placeholder="Password" ngModel />
+                    <span cInputGroupText>
+                      <i alt="show" class="fa fa-eye eye-show" (click)="showPassword = !showPassword"
+                        [class.hide]="showPassword">👁</i>
+                      <i alt="hide" class="fa fa-eye-slash eye-hide" (click)="showPassword = !showPassword"
+                        [class.hide]="!showPassword"></i>
+                    </span>
+                  </div>
+                </c-input-group>
+                <c-row>
+                  <c-col xs="6">
+                    <button cButton class="px-4" type="submit" color="primary">
+                      Login
+                    </button>
+                  </c-col>
+                </c-row>
+              </form>
+              <c-modal id="loginResponseModal" [visible]="visibleLoginResponse"
+                (visibleChange)="handleLoginResponseChange($event)">
+                <c-modal-header>
+                  <h5 cModalTitle>Login Failed</h5>
+                  <button (click)="toggleLoginResponse()" cButtonClose></button>
+                </c-modal-header>
+                <c-modal-body>{{message}}</c-modal-body>
+                <c-modal-footer>
+                  <button (click)="toggleLoginResponse()" cButton color="secondary">
+                    Close
+                  </button>
+                </c-modal-footer>
+              </c-modal>
+            </c-card-body>
+          </c-card>
+        </c-card-group>
+      </c-col>
+    </c-row>
+  </c-container>
+</div>
