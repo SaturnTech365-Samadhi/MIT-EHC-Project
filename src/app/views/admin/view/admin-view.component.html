@@ -1,1 +1,16 @@
-<p>admin-view works!</p>
+<c-nav variant="tabs">
+    <a [active]="true" [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="0" cNavLink>User Details</a>
+    <a [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="1" cNavLink>Zone Details</a>
+    <a [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="2" cNavLink>Dashboard</a>
+  </c-nav>
+  <c-tab-content #tabContent="cTabContent">
+    <c-tab-pane class="p-3">
+      put user details here
+    </c-tab-pane>
+    <c-tab-pane class="p-3">
+      put zone details here
+    </c-tab-pane>
+    <c-tab-pane class="p-3">
+        put dashboard here
+    </c-tab-pane>
+  </c-tab-content>
