@@ -10,10 +10,16 @@ export const navItems: INavData[] = [
     name: 'Dashboard',
     url: '/dashboard',
     iconComponent: { name: 'cil-speedometer' },
-    // badge: {
-    //   color: 'info',
-    //   text: 'NEW'
-    // }
+  },
+  {
+    name: 'Login',
+    url: '/login',
+    iconComponent: { name: 'cil-pencil' }
+  },
+  {
+    name: 'Farmer',
+    url: '/farmer',
+    iconComponent: { name: 'cil-pencil' }
   },
   // {
   //   title: true,
@@ -24,11 +30,7 @@ export const navItems: INavData[] = [
   //   url: '/theme/colors',
   //   iconComponent: { name: 'cil-drop' }
   // },
-  {
-    name: 'Login',
-    url: '/login',
-    iconComponent: { name: 'cil-pencil' }
-  },
+ 
   // {
   //   name: 'Components',
   //   title: true

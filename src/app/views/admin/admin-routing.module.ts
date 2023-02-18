@@ -1,31 +1,37 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginComponent } from './login.component';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminViewComponent } from './view/admin-view.component';
 
 const routes: Routes = [
   {
     path: '',
     data: {
-      title: 'Login'
+      title: 'admin'
     },
     children: [
       {
         path: '',
-        component: LoginComponent,
+        pathMatch: 'full',
+        redirectTo: 'view'
+      },
+      {
+        path: 'view',
+        component: AdminViewComponent,
         data: {
-          title: 'login'
+          title: 'View'
         }
-      }
-    ],
-  },
+      },
+    ]
+  }
 ];
 
 @NgModule({
   declarations: [],
   imports: [
+    CommonModule,
     RouterModule.forChild(routes)
   ],
   exports: [RouterModule]
 })
-export class LoginRoutingModule { }
+export class AdminRoutingModule { }
