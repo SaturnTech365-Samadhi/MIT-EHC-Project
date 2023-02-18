@@ -104,6 +104,13 @@ const routes: Routes = [
     }
   },
   {
+    path: 'login',
+    component: LoginComponent,
+    data: {
+      title: 'login'
+    }
+  },
+  {
      path: 'public',
      component: PublicViewComponent,
      data: {
