@@ -1,16 +1,56 @@
 <c-nav variant="tabs">
-    <a [active]="true" [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="0" cNavLink>User Details</a>
-    <a [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="1" cNavLink>Zone Details</a>
-    <a [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="2" cNavLink>Dashboard</a>
-  </c-nav>
-  <c-tab-content #tabContent="cTabContent">
-    <c-tab-pane class="p-3">
-      put user details here
-    </c-tab-pane>
-    <c-tab-pane class="p-3">
-      put zone details here
-    </c-tab-pane>
-    <c-tab-pane class="p-3">
-        put dashboard here
-    </c-tab-pane>
-  </c-tab-content>
+  <a [active]="true" [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="0" cNavLink>User Details</a>
+  <a [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="1" cNavLink>Zone Details</a>
+  <a [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="2" cNavLink>Dashboard</a>
+</c-nav>
+<c-tab-content #tabContent="cTabContent">
+  <c-tab-pane class="p-3">
+    <table cTable>
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Class</th>
+        <th scope="col">Heading</th>
+        <th scope="col">Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td><button cButton color="info" shape="rounded-0">Edit</button> &nbsp;
+          <button cButton color="danger" shape="rounded-0">Delete</button>
+        </td>
+      </tr>      
+      </tbody>
+    </table>
+  </c-tab-pane>
+  <c-tab-pane class="p-3">
+    <table cTable>
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Class</th>
+        <th scope="col">Heading</th>
+        <th scope="col">Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td><button cButton color="info" shape="rounded-0">Edit</button> &nbsp;
+          <button cButton color="danger" shape="rounded-0">Delete</button>
+        </td>
+      </tr>      
+      </tbody>
+    </table>
+  </c-tab-pane>
+  <c-tab-pane class="p-3">
+    This is some placeholder content the <strong>Contact</strong> tab's associated content. Clicking another
+    tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the
+    content visibility and styling. You can use it with tabs, pills, and any other .nav-powered navigation.
+  </c-tab-pane>
+</c-tab-content>

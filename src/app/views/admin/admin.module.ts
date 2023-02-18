@@ -5,7 +5,7 @@ import { AdminViewComponent } from './view/admin-view.component';
 import { LogViewComponent } from './log/log-view.component';
 import { UserRegisterComponent } from './user/user-register.component';
 import { ZoneRegisterComponent } from './zone/zone-register.component';
-import { NavModule, TabsModule } from '@coreui/angular';
+import { ButtonModule, NavModule, TableModule, TabsModule, UtilitiesModule } from '@coreui/angular';
 
 
 @NgModule({
@@ -19,8 +19,10 @@ import { NavModule, TabsModule } from '@coreui/angular';
     CommonModule,
     AdminRoutingModule,    
     NavModule, 
-    TabsModule
-    
+    TabsModule,
+    TableModule,
+    UtilitiesModule,
+    ButtonModule
   ]
 })
 export class AdminModule { }
