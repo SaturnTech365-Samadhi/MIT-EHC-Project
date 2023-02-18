@@ -7,6 +7,7 @@ import { Page500Component } from './views/pages/page500/page500.component';
 import { LoginComponent } from './views/pages/login/login.component';
 import { RegisterComponent } from './views/pages/register/register.component';
 import { PublicViewComponent } from './views/public/view/public-view.component';
+import { FarmerViewComponent } from './views/farmer/view/farmer-view.component';
 
 const routes: Routes = [
   {
@@ -27,9 +28,19 @@ const routes: Routes = [
           import('./views/public/public.module').then((m) => m.PublicModule)
       },
       {
+        path: 'login',
+        loadChildren: () =>
+          import('./views/login/login.module').then((m) => m.LoginModule)
+      },
+      {
         path: 'dashboard',
         loadChildren: () =>
           import('./views/dashboard/dashboard.module').then((m) => m.DashboardModule)
+      },
+      {
+        path: 'farmer',
+        loadChildren: () =>
+          import('./views/farmer/farmer.module').then((m) => m.FarmerModule)
       },
       // {
       //   path: 'theme',
@@ -107,6 +118,21 @@ const routes: Routes = [
       title: 'Public'
     }
   },
+  {
+    path: 'farmer',
+    component: FarmerViewComponent,
+    data: {
+      title: 'farmer Page'
+   }
+  },
+ {
+   path: 'farmer',
+   loadChildren: () =>
+     import('./views/farmer/farmer.module').then((m) => m.FarmerModule),
+   data: {
+     title: 'Farmer'
+   }
+ },
   // {
   //   path: 'register',
   //   component: RegisterComponent,
