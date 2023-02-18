@@ -42,6 +42,11 @@ const routes: Routes = [
         loadChildren: () =>
           import('./views/farmer/farmer.module').then((m) => m.FarmerModule)
       },
+      {
+        path: 'admin',
+        loadChildren: () =>
+          import('./views/admin/admin.module').then((m) => m.AdminModule)
+      },
       // {
       //   path: 'theme',
       //   loadChildren: () =>

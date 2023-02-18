@@ -21,6 +21,11 @@ export const navItems: INavData[] = [
     url: '/farmer',
     iconComponent: { name: 'cil-pencil' }
   },
+  {
+    name: 'Admin',
+    url: '/admin',
+    iconComponent: { name: 'cil-pencil' }
+  },
   // {
   //   title: true,
   //   name: 'Theme'
