@@ -6,6 +6,7 @@ import { Page404Component } from './views/pages/page404/page404.component';
 import { Page500Component } from './views/pages/page500/page500.component';
 import { LoginComponent } from './views/pages/login/login.component';
 import { RegisterComponent } from './views/pages/register/register.component';
+import { PublicViewComponent } from './views/public/view/public-view.component';
 
 const routes: Routes = [
   {
@@ -91,13 +92,13 @@ const routes: Routes = [
       title: 'Page 500'
     }
   },
-  // {
-  //   path: 'login',
-  //   component: LoginComponent,
-  //   data: {
-  //     title: 'Login Page'
-  //   }
-  // },
+  {
+     path: 'public',
+     component: PublicViewComponent,
+     data: {
+       title: 'public Page'
+    }
+   },
   {
     path: 'public',
     loadChildren: () =>
@@ -113,7 +114,7 @@ const routes: Routes = [
   //     title: 'Register Page'
   //   }
   // },
-  { path: '**', redirectTo: 'dashboard' }
+  { path: '**', redirectTo: 'public' }
 ];
 
 @NgModule({
