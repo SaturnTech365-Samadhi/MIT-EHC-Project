@@ -4,10 +4,9 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { AdminViewComponent } from './view/admin-view.component';
 
 
-
 @NgModule({
   declarations: [
-    AdminViewComponent
+    AdminViewComponent,
   ],
   imports: [
     CommonModule,
