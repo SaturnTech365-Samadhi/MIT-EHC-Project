@@ -1,5 +1,6 @@
-<p>public-view works!</p>
-<c-carousel>
+
+<div class="container_carousel">
+<c-carousel class="">
     <c-carousel-indicators></c-carousel-indicators>
     <c-carousel-inner>
       <c-carousel-item *ngFor="let slide of slides">
@@ -13,27 +14,87 @@
     <c-carousel-control [routerLink] caption="Previous" direction="prev"></c-carousel-control>
     <c-carousel-control [routerLink] caption="Next" direction="next"></c-carousel-control>
   </c-carousel>
+</div><br>
+<h1 class="h1_mission">Our Mission</h1>
+<div class="div_mission">
+  <p class="p_mission">Our mission is to minimize human-elephant conflict by supporting Human-Elephant Coexistence,securing human and elephant lives with Nature and Technology.
+    </p>
+</div>
+<div class="div_mission">
+  <h1 class="h1_mission">What We Do</h1>
+ 
+ 
+</div>
 
-  <c-navbar colorScheme="light" expand="lg" class="bg-light">
-    <c-container fluid>
-      <button [cNavbarToggler]="collapseRef"></button>
-      <a cNavbarBrand>
-        Navbar
-      </a>
-      <div #collapseRef="cCollapse" navbar cCollapse>
-        <c-navbar-nav class="me-auto mb-2 mb-lg-0">
-          <c-nav-item>
-            <a cNavLink active>Home</a>
-          </c-nav-item>
-          <c-nav-item>
-            <a cNavLink>Link</a>
-          </c-nav-item>
-          <c-nav-item>
-            <a cNavLink disabled class="d-block d-lg-none d-xl-block">Disabled</a>
-          </c-nav-item>
-        </c-navbar-nav>
-        <form cForm class="d-flex" role="search">
-          <input cFormControl type="search" placeholder="Search" aria-label="Search" class="me-2">
-          <button cButton color="success" variant="outline">Search</button>
-        </form>
+<div class="row row-cols-1 row-cols-md-3 g-6">
+  <div class="col">
+    <div class="card">
+      <img src="./assets/images/card_bees_img_04.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Elephants & Honey Bees</h5><br/><br/>
+       
+        <a href="#" class="btn btn-primary">Learn More</a>
       </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="./assets/images/card_monitoring_img_05.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Real-time Elephant Detection & Monitoring</h5><br/>
+      
+        <a href="#" class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="./assets/images/card_incident_img_06.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Incident Reporting and Management</h5><br/>
+        <a href="#" class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+  </div><br/><br/>
+  <div class="col">
+    <div class="card">
+      <img src="./assets/images/card_live_img_07.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">View Live Camera Feed of respective Zone(s)</h5><br/>
+        <a href="#" class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="./assets/images/card_dashboard_img_08.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Real-Time Incident Dashboard</h5><br/><br/>
+        <a href="#" class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="./assets/images/card_camera_awareness_img_09.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Community Awareness</h5><br/><br/>
+        <a href="#" class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+  </div>
+</div>
+<br/>
+<div class="container">
+  <h2 class="h2_container">Elephants and Honey Bees</h2><br/>
+  <div class="row">
+    <div class="col-sm">
+      <img src="./assets/images/section_honeybees_img_10.png" alt="..." class=".sec_img">
+    </div>
+    <div class="col">
+      <p class="para_container">Hone Bees are effective way to reduce  damage from crop-raiding elephants.The project explores the use of novel Beehive Fences as a natural elephant repellent 
+        creating a social and economic boost to poverty-stricken rural communities through the 
+        sustainable harvesting of “Elephant-Friendly Honey. </p>
+    </div>
+  </div>
+</div>

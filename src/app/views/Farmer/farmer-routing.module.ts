@@ -1,31 +1,37 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginComponent } from './login.component';
 import { RouterModule, Routes } from '@angular/router';
+import { FarmerViewComponent } from './view/farmer-view.component';
 
 const routes: Routes = [
   {
     path: '',
     data: {
-      title: 'Login'
+      title: 'Farmer'
     },
     children: [
       {
         path: '',
-        component: LoginComponent,
+        pathMatch: 'full',
+        redirectTo: 'view'
+      },
+      {
+        path: 'view',
+        component: FarmerViewComponent,
         data: {
-          title: 'login'
+          title: 'View'
         }
       }
-    ],
-  },
+    ]
+  }
 ];
 
 @NgModule({
   declarations: [],
   imports: [
+    CommonModule,
     RouterModule.forChild(routes)
   ],
-  exports: [RouterModule]
+  exports : [RouterModule]
 })
-export class LoginRoutingModule { }
+export class FarmerRoutingModule { }
