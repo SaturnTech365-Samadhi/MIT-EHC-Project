@@ -6,11 +6,11 @@ export const navItems: INavData[] = [
     url: '/public',
     iconComponent: { name: 'cil-drop' }
   },
-  {
-    name: 'Dashboard',
-    url: '/dashboard',
-    iconComponent: { name: 'cil-speedometer' },
-  },
+  // {
+  //   name: 'Dashboard',
+  //   url: '/dashboard',
+  //   iconComponent: { name: 'cil-speedometer' },
+  // },
   {
     name: 'Login',
     url: '/login',

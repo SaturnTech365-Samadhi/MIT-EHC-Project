@@ -5,7 +5,10 @@ import { AdminViewComponent } from './view/admin-view.component';
 import { LogViewComponent } from './log/log-view.component';
 import { UserRegisterComponent } from './user/user-register.component';
 import { ZoneRegisterComponent } from './zone/zone-register.component';
-import { ButtonModule, NavModule, TableModule, TabsModule, UtilitiesModule } from '@coreui/angular';
+import { AvatarModule, ButtonGroupModule, ButtonModule, CardModule, FormModule, GridModule, NavModule, ProgressModule, TableModule, TabsModule, UtilitiesModule } from '@coreui/angular';
+import { IconModule } from '@coreui/icons-angular';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ChartjsModule } from '@coreui/angular-chartjs';
 
 
 @NgModule({
@@ -22,7 +25,21 @@ import { ButtonModule, NavModule, TableModule, TabsModule, UtilitiesModule } fro
     TabsModule,
     TableModule,
     UtilitiesModule,
-    ButtonModule
+    ButtonModule,
+    CardModule,
+    NavModule,
+    IconModule,
+    TabsModule,
+    CommonModule,
+    GridModule,
+    ProgressModule,
+    ReactiveFormsModule,
+    ButtonModule,
+    FormModule,
+    ButtonModule,
+    ButtonGroupModule,
+    ChartjsModule,
+    AvatarModule
   ]
 })
 export class AdminModule { }
