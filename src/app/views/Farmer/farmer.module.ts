@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FarmerRoutingModule } from './farmer-routing.module';
 import { FarmerViewComponent } from './view/farmer-view.component';
+import { ImgModule, ProgressModule, SpinnerModule, TableModule, UtilitiesModule } from '@coreui/angular';
+import { ChartjsModule } from '@coreui/angular-chartjs';
 
 
 @NgModule({
@@ -10,7 +12,13 @@ import { FarmerViewComponent } from './view/farmer-view.component';
   ],
   imports: [
     CommonModule,
-    FarmerRoutingModule
+    FarmerRoutingModule,
+    ProgressModule,
+    SpinnerModule,
+    TableModule,
+    UtilitiesModule,
+    ImgModule,
+    ChartjsModule
   ]
 })
 export class FarmerModule { }
