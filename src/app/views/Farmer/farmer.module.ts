@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FarmerRoutingModule } from './farmer-routing.module';
 import { FarmerViewComponent } from './view/farmer-view.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -10,7 +11,8 @@ import { FarmerViewComponent } from './view/farmer-view.component';
   ],
   imports: [
     CommonModule,
-    FarmerRoutingModule
+    FarmerRoutingModule,
+    HttpClientModule
   ]
 })
 export class FarmerModule { }

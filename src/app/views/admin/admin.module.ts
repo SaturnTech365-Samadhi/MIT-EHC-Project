@@ -9,6 +9,7 @@ import { AvatarModule, ButtonGroupModule, ButtonModule, CardModule, FormModule, 
 import { IconModule } from '@coreui/icons-angular';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ChartjsModule } from '@coreui/angular-chartjs';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { ChartjsModule } from '@coreui/angular-chartjs';
     ButtonModule,
     ButtonGroupModule,
     ChartjsModule,
-    AvatarModule
+    AvatarModule,
+    HttpClientModule
   ]
 })
 export class AdminModule { }
