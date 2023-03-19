@@ -14,19 +14,19 @@ export const navItems: INavData[] = [
   {
     name: 'Login',
     url: '/login',
-    iconComponent: { name: 'cil-pencil' }
+    iconComponent: { name: 'cil-drop' }
   },
   {
     name: 'Farmer',
     url: '/farmer',
-    iconComponent: { name: 'cil-pencil' }
+    iconComponent: { name: 'cil-drop' }
   },
   {
     name: 'Admin',
     url: '/admin',
-    iconComponent: { name: 'cil-pencil' }
+    iconComponent: { name: 'cil-drop' }
   },
-  // {
+  // {s
   //   title: true,
   //   name: 'Theme'
   // },

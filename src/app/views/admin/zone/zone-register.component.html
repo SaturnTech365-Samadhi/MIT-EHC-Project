@@ -1,1 +1,155 @@
-<p>zone-register works!</p>
+<c-row ngPreserveWhitespaces>
+    <c-col xs="12">
+        <c-card class="mb-4">
+            <c-card-header>
+                <strong>Create Zone</strong>
+            </c-card-header>
+            <c-card-body>
+                <form cForm class="row g-3 needs-validation">
+                    <c-col md="3">
+                        <label cLabel>Zone Id</label>
+                        <input cFormControl required type="text" name="customerName">
+                        <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+                    </c-col>
+                    <c-col [md]="9">
+                    </c-col>
+                    <c-col md="3">
+                        <label cLabel>Zone Name</label>
+                        <input cFormControl required type="text" name="customerName">
+                        <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+                    </c-col>
+                    <c-col [md]="9">
+                    </c-col>
+                    <c-col md="3">
+                        <label cLabel for="validationCustom01">Zone Area</label>
+                        <input cFormControl id="validationCustom01" required type="email" name="customerEmailAddress" />
+                        <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+                        <c-form-feedback [valid]="false">Please enter valid Email Address!</c-form-feedback>
+                    </c-col>
+                    <c-col [md]="9">
+                    </c-col>
+                    <c-col [md]="12">
+                        <button (click)="toggleLiveDemo1()" cButton color="light" size="sm">Add Camera</button>
+                        <c-modal id="liveDemoModal1" [visible]="visible" (visibleChange)="handleLiveDemoChange1($event)">
+                          <c-modal-header>
+                            <h5 cModalTitle>Add Camera</h5>
+                            <button (click)="toggleLiveDemo1()" cButtonClose></button>
+                          </c-modal-header>
+                          <c-modal-body>
+                            <c-col md="3">
+                                <label cLabel>Camera Id</label>
+                                <input cFormControl required type="text" name="customerName">
+                                <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+                            </c-col>
+                            <c-col [md]="9">
+                            </c-col>
+                            <c-col md="3">
+                                <label cLabel>Serial No</label>
+                                <input cFormControl required type="text" name="customerName">
+                                <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+                            </c-col>
+                            <c-col [md]="9">
+                            </c-col>
+                            <c-col md="3">
+                                <label cLabel>Model No</label>
+                                <input cFormControl required type="text" name="customerName">
+                                <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+                            </c-col>
+                            <c-col [md]="9">
+                            </c-col>
+                            <c-col md="3">
+                                <label cLabel>Zone Id</label>
+                                <input cFormControl required type="text" name="customerName">
+                                <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+                            </c-col>
+                            <c-col [md]="9">
+                            </c-col>
+                          </c-modal-body>
+                          <c-modal-footer>
+                            <button cButton color="primary" type="submit" size = "sm">Save</button>
+                          </c-modal-footer>
+                        </c-modal>
+                    </c-col>
+                    <c-col [md]="12">
+                        <button (click)="toggleLiveDemo2()" cButton color="light" size="sm">Add Bee Box</button>
+                        <c-modal id="liveDemoModal2" [visible]="visible" (visibleChange)="handleLiveDemoChange2($event)">
+                          <c-modal-header>
+                            <h5 cModalTitle>Add Bee Box</h5>
+                            <button (click)="toggleLiveDemo2()" cButtonClose></button>
+                          </c-modal-header>
+                          <c-modal-body>
+                            <c-col md="3">
+                                <label cLabel>Bee Box Id</label>
+                                <input cFormControl required type="text" name="customerName">
+                                <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+                            </c-col>
+                            <c-col [md]="9">
+                            </c-col>
+                            <c-col md="3">
+                                <label cLabel>Bee Box Name</label>
+                                <input cFormControl required type="text" name="customerName">
+                                <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+                            </c-col>
+                            <c-col [md]="9">
+                            </c-col>
+                            <c-col md="3">
+                                <label cLabel>Zone Id</label>
+                                <input cFormControl required type="text" name="customerName">
+                                <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+                            </c-col>
+                            <c-col [md]="9">
+                            </c-col>
+                          </c-modal-body>
+                          <c-modal-footer>
+                            <button cButton color="primary" type="submit" size = "sm">Save</button>
+                          </c-modal-footer>
+                        </c-modal>
+                    </c-col>
+                    <c-col [md]="12">
+                        <button (click)="toggleLiveDemo3()" cButton color="light" size="sm">Add Speaker</button>
+                        <c-modal id="liveDemoModal3" [visible]="visible" (visibleChange)="handleLiveDemoChange3($event)">
+                          <c-modal-header>
+                            <h5 cModalTitle>Add Speaker</h5>
+                            <button (click)="toggleLiveDemo3()" cButtonClose></button>
+                          </c-modal-header>
+                          <c-modal-body>
+                            <c-col md="3">
+                                <label cLabel>Speaker Id</label>
+                                <input cFormControl required type="text" name="customerName">
+                                <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+                            </c-col>
+                            <c-col [md]="9">
+                            </c-col>
+                            <c-col md="3">
+                                <label cLabel>Serial No</label>
+                                <input cFormControl required type="text" name="customerName">
+                                <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+                            </c-col>
+                            <c-col [md]="9">
+                            </c-col>
+                            
+                            <c-col md="3">
+                                <label cLabel>Zone Id</label>
+                                <input cFormControl required type="text" name="customerName">
+                                <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+                            </c-col>
+                            <c-col [md]="9">
+                            </c-col>
+                          </c-modal-body>
+                          <c-modal-footer>
+                            <button cButton color="primary" type="submit" size = "sm">Save</button>
+                          </c-modal-footer>
+                        </c-modal>
+                    </c-col>
+                    <c-col md="4">
+                        <button cButton (click)="register()" class="me-1 actionButton" color="primary" type="submit">
+                            Register
+                        </button>
+                    </c-col>
+                    <c-col [md]="8">
+                    </c-col>
+                </form>
+            </c-card-body>
+        </c-card>
+    </c-col>
+</c-row>
