@@ -6,6 +6,8 @@ import { Page404Component } from './views/pages/page404/page404.component';
 import { Page500Component } from './views/pages/page500/page500.component';
 import { LoginComponent } from './views/pages/login/login.component';
 import { RegisterComponent } from './views/pages/register/register.component';
+import { PublicViewComponent } from './views/public/view/public-view.component';
+import { FarmerViewComponent } from './views/farmer/view/farmer-view.component';
 
 const routes: Routes = [
   {
@@ -26,6 +28,11 @@ const routes: Routes = [
           import('./views/public/public.module').then((m) => m.PublicModule)
       },
       {
+        path: 'login',
+        loadChildren: () =>
+          import('./views/login/login.module').then((m) => m.LoginModule)
+      },
+      {
         path: 'dashboard',
         loadChildren: () =>
           import('./views/dashboard/dashboard.module').then((m) => m.DashboardModule)
@@ -34,6 +41,16 @@ const routes: Routes = [
         path: 'videoStreaming',
         loadChildren: () =>
           import('./views/videoStreaming/videoStreaming.module').then((m) => m.VideoStreamingModule)
+      },
+      {
+        path: 'farmer',
+        loadChildren: () =>
+          import('./views/farmer/farmer.module').then((m) => m.FarmerModule)
+      },
+      {
+        path: 'admin',
+        loadChildren: () =>
+          import('./views/admin/admin.module').then((m) => m.AdminModule)
       },
       // {
       //   path: 'theme',
@@ -96,13 +113,20 @@ const routes: Routes = [
       title: 'Page 500'
     }
   },
-  // {
-  //   path: 'login',
-  //   component: LoginComponent,
-  //   data: {
-  //     title: 'Login Page'
-  //   }
-  // },
+  {
+    path: 'login',
+    component: LoginComponent,
+    data: {
+      title: 'login'
+    }
+  },
+  {
+     path: 'public',
+     component: PublicViewComponent,
+     data: {
+       title: 'public Page'
+    }
+   },
   {
     path: 'public',
     loadChildren: () =>
@@ -111,6 +135,21 @@ const routes: Routes = [
       title: 'Public'
     }
   },
+  {
+    path: 'farmer',
+    component: FarmerViewComponent,
+    data: {
+      title: 'farmer Page'
+   }
+  },
+ {
+   path: 'farmer',
+   loadChildren: () =>
+     import('./views/farmer/farmer.module').then((m) => m.FarmerModule),
+   data: {
+     title: 'Farmer'
+   }
+ },
   // {
   //   path: 'register',
   //   component: RegisterComponent,
@@ -118,7 +157,7 @@ const routes: Routes = [
   //     title: 'Register Page'
   //   }
   // },
-  { path: '**', redirectTo: 'dashboard' }
+  { path: '**', redirectTo: 'public' }
 ];
 
 @NgModule({

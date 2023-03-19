@@ -58,7 +58,6 @@ export class HttpClientAdapterService {
     if (!headers) {
       headers = {};
     }
-    this.addKeyValue(headers, 'Authorization', `Bearer ${this.token}`);
     this.addKeyValue(headers, 'Content-Type', 'application/json');
     return this._http.post(url, bodyParameter, { headers: headers, params: queryParameter }).pipe(
       catchError(this.handleError)
@@ -69,7 +68,6 @@ export class HttpClientAdapterService {
     if (!headers) {
       headers = {};
     }
-    this.addKeyValue(headers, 'Authorization', `Bearer ${this.token}`);
     this.addKeyValue(headers, 'Content-Type', 'application/json');
     return this._http.put(url, bodyParameter, { headers: headers, params: queryParameter }).pipe(
       catchError(this.handleError)

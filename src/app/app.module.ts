@@ -4,7 +4,9 @@ import { BrowserModule, Title } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CarouselModule } from '@coreui/angular';
+import { NavbarModule } from '@coreui/angular';
 
+import { MatCardModule } from '@angular/material/card';
 import {
   PERFECT_SCROLLBAR_CONFIG,
   PerfectScrollbarConfigInterface,
@@ -46,6 +48,7 @@ import {
 } from '@coreui/angular';
 
 import { IconModule, IconSetService } from '@coreui/icons-angular';
+import { HttpClientModule } from '@angular/common/http';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -87,6 +90,8 @@ const APP_CONTAINERS = [
     ListGroupModule,
     CardModule,
     CarouselModule,
+    NavbarModule,
+    HttpClientModule
   ],
   providers: [
     {
@@ -97,6 +102,7 @@ const APP_CONTAINERS = [
       provide: PERFECT_SCROLLBAR_CONFIG,
       useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG,
     },
+    HttpClientModule,
     IconSetService,
     Title
   ],
