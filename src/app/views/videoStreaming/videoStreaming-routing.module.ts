@@ -8,7 +8,6 @@ const routes: Routes = [
     component: VideoStreamingComponent,
     data: {
       title: $localize`VideoStreaming`
-        // title: `VideoStreaming`
     }
   }
 ];
