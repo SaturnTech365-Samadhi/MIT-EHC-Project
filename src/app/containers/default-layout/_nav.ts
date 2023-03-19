@@ -16,16 +16,16 @@ export const navItems: INavData[] = [
     url: '/login',
     iconComponent: { name: 'cil-drop' }
   },
-  {
-    name: 'Farmer',
-    url: '/farmer',
-    iconComponent: { name: 'cil-drop' }
-  },
-  {
-    name: 'Admin',
-    url: '/admin',
-    iconComponent: { name: 'cil-drop' }
-  },
+  // {
+  //   name: 'Farmer',
+  //   url: '/farmer',
+  //   iconComponent: { name: 'cil-drop' }
+  // },
+  // {
+  //   name: 'Admin',
+  //   url: '/admin',
+  //   iconComponent: { name: 'cil-drop' }
+  // },
   // {s
   //   title: true,
   //   name: 'Theme'

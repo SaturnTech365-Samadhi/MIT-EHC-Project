@@ -7,7 +7,6 @@ import { ImgModule, ProgressModule, SpinnerModule, TableModule, UtilitiesModule 
 import { ChartjsModule } from '@coreui/angular-chartjs';
 
 import { HttpClientModule } from '@angular/common/http';
-ew-Copy
 
 
 @NgModule({
@@ -23,8 +22,7 @@ ew-Copy
     TableModule,
     UtilitiesModule,
     ImgModule,
-    ChartjsModule
-
+    ChartjsModule,
     HttpClientModule
 
   ]
