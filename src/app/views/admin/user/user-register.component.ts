@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { AdminService } from 'src/app/services/admin.service';
+import {AdminService} from 'src/app/services/admin.service'
 
 @Component({
-  selector: 'app-farmer-view',
-  templateUrl: './farmer-view.component.html',
-  styleUrls: ['./farmer-view.component.scss']
+  selector: 'app-user-register',
+  templateUrl: './user-register.component.html',
+  styleUrls: ['./user-register.component.scss']
 })
-export class FarmerViewComponent implements OnInit {
+export class UserRegisterComponent implements OnInit {
   
   public data: any =  {
     username : 'test',
@@ -17,11 +17,10 @@ export class FarmerViewComponent implements OnInit {
 
   constructor(private adminService: AdminService, private route: ActivatedRoute){}
   ngOnInit(): void {
-    
+    this.register()
   }
 
   register(){
-    console.log(this.data);
     this.adminService.register(this.data)
     .subscribe((result) => {
       if (result) {

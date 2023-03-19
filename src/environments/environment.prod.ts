@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
   baseUrl: 'https://localhost:4200/#/',
-  apiUrl: 'https://dev1roadsideassistadminwebapi.azurewebsites.net/'
+  apiUrl: 'https://localhost/api:80/#/'
 };
