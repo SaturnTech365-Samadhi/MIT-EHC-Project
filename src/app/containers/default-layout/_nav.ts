@@ -36,14 +36,9 @@ export const navItems: INavData[] = [
   //   iconComponent: { name: 'cil-drop' }
   // },
   {
-    name: 'Login',
-    url: '/login',
-    iconComponent: { name: 'cil-pencil' }
-  },
-  {
     name: 'Live Streaming',
     url: '/videoStreaming',
-    iconComponent: { name: 'cil-cursor' }
+    iconComponent: { name: 'cil-drop' }
   },
   // {
   //   name: 'Components',

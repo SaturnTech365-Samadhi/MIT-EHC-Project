@@ -7,6 +7,8 @@ import { VgOverlayPlayModule } from '@videogular/ngx-videogular/overlay-play';
 import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
 
 import { VideoStreamingRoutingModule } from './videoStreaming-routing.module';
+import { CardModule, TableModule } from '@coreui/angular';
+
 
 @NgModule({
   declarations: [VideoStreamingComponent],
@@ -16,7 +18,10 @@ import { VideoStreamingRoutingModule } from './videoStreaming-routing.module';
     VgControlsModule,
     VgOverlayPlayModule,
     VgBufferingModule,
-    VideoStreamingRoutingModule
+    VideoStreamingRoutingModule,
+    TableModule,
+    CardModule
+    
     // VideoStreamingComponent
   ],
   providers: [],
