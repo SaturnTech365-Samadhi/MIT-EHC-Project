@@ -29,6 +29,11 @@ export const navItems: INavData[] = [
     url: '/login',
     iconComponent: { name: 'cil-pencil' }
   },
+  {
+    name: 'Live Streaming',
+    url: '/videoStreaming',
+    iconComponent: { name: 'cil-cursor' }
+  },
   // {
   //   name: 'Components',
   //   title: true

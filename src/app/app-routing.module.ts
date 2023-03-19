@@ -30,6 +30,11 @@ const routes: Routes = [
         loadChildren: () =>
           import('./views/dashboard/dashboard.module').then((m) => m.DashboardModule)
       },
+      {
+        path: 'videoStreaming',
+        loadChildren: () =>
+          import('./views/videoStreaming/videoStreaming.module').then((m) => m.VideoStreamingModule)
+      },
       // {
       //   path: 'theme',
       //   loadChildren: () =>
