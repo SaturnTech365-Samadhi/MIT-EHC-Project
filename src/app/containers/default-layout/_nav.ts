@@ -35,7 +35,16 @@ export const navItems: INavData[] = [
   //   url: '/theme/colors',
   //   iconComponent: { name: 'cil-drop' }
   // },
- 
+  {
+    name: 'Login',
+    url: '/login',
+    iconComponent: { name: 'cil-pencil' }
+  },
+  {
+    name: 'Live Streaming',
+    url: '/videoStreaming',
+    iconComponent: { name: 'cil-cursor' }
+  },
   // {
   //   name: 'Components',
   //   title: true
