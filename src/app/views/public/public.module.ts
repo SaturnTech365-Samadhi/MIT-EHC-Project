@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PublicRoutingModule } from './public-routing.module';
 import { PublicViewComponent } from './view/public-view.component';
+import { NavbarModule } from '@coreui/angular';
 
 
 
@@ -13,7 +14,8 @@ import { PublicViewComponent } from './view/public-view.component';
   imports: [
     CommonModule,
     PublicRoutingModule,
-    CarouselModule
+    CarouselModule,
+    NavbarModule
   ]
 })
 export class PublicModule { }

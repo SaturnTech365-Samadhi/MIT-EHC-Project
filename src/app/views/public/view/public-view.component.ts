@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-public-view',
   templateUrl: './public-view.component.html',
@@ -13,13 +14,13 @@ export class PublicViewComponent implements OnInit {
 
   ngOnInit(): void {
     this.slides[0] = {
-      src: './assets/images/e1.jpg',
+      src: './assets/images/carousel_img_01.png',
     };
     this.slides[1] = {
-      src: './assets/images/e2.jpg',
+      src: './assets/images/carousel_img_02.png',
     }
     this.slides[2] = {
-      src: './assets/images/e4.jpg',
+      src: './assets/images/carousel_img_03.png',
     }
   }
 }

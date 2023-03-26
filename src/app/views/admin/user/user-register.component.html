@@ -1,0 +1,88 @@
+<c-row ngPreserveWhitespaces>
+    <c-col xs="12">
+        <c-card class="mb-4">
+            <c-card-header>
+                <strong>User Registration</strong>
+            </c-card-header>
+            <c-card-body>
+                <form cForm class="row g-3 needs-validation">
+                    <c-col md="3">
+                        <label cLabel>First Name</label>
+                        <input cFormControl required type="text" name="customerName">
+                        <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+                    </c-col>
+                    <c-col [md]="9">
+                    </c-col>
+                    <c-col md="3">
+                        <label cLabel>Last Name</label>
+                        <input cFormControl required type="text" name="customerName">
+                        <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+                    </c-col>
+                    <c-col [md]="9">
+                    </c-col>
+                    <c-col md="3">
+                        <label cLabel for="validationCustom01">Email Address</label>
+                        <input cFormControl id="validationCustom01" required type="email" name="customerEmailAddress" />
+                        <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+                        <c-form-feedback [valid]="false">Please enter valid Email Address!</c-form-feedback>
+                    </c-col>
+                    <c-col [md]="9">
+                    </c-col>
+                    <c-col md="3">
+                        <label cLabel>Phone Number</label>
+                        <input cFormControl type="text" required name="customerPhoneNo" />
+                        <c-form-feedback [valid]="false">Please provide a Phone Number!</c-form-feedback>
+                    </c-col>
+                    <c-col [md]="9">
+                    </c-col>
+                    <c-col md="3">
+                        <label cLabel>House No</label>
+                        <input cFormControl type="text" maxlength="50" name="streetNo" />
+                        <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+                        <c-form-feedback [valid]="false">Please provide a valid streetNo.</c-form-feedback>
+                    </c-col>
+                    <c-col [md]="9">
+                    </c-col>
+                    <c-col md="3">
+                        <label cLabel>Address</label>
+                        <input cFormControl type="text" maxlength="100" name="streetAddress01" />
+                        <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+                        <c-form-feedback [valid]="false">Please provide a valid Street Address01.</c-form-feedback>
+                    </c-col>
+                    <c-col [md]="9">
+                    </c-col>
+                    <c-col md="3">
+                        <label cLabel>Username</label>
+                        <input cFormControl type="text" maxlength="100" name="streetAddress02" />
+                        <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+                        <c-form-feedback [valid]="false">Please provide a valid Street Address02.</c-form-feedback>
+                    </c-col>
+                    <c-col [md]="9">
+                    </c-col>
+                    <c-col md="3">
+                        <label cLabel>Password</label>
+                        <input cFormControl type="text" maxlength="50" name="suburb" />
+                        <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+                        <c-form-feedback [valid]="false">Please provide a valid Suburb.</c-form-feedback>
+                    </c-col>
+                    <c-col [md]="9">
+                    </c-col>
+                    <c-col md="3">
+                        <label cLabel>User Role</label>
+                        <select cSelect>
+                            <option value="1">Farmer</option>
+                            <option value="2">Admin</option>
+                        </select>
+                        <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+                        <c-form-feedback [valid]="false">Please provide a valid region.</c-form-feedback>
+                    </c-col>
+                    <c-col md="12">
+                        <button cButton (click)="register()" class="me-1 actionButton" color="primary" type="submit">
+                            Register
+                        </button>
+                    </c-col>
+                </form>
+            </c-card-body>
+        </c-card>
+    </c-col>
+</c-row>

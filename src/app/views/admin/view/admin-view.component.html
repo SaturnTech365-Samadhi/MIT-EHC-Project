@@ -1,0 +1,134 @@
+<c-row ngPreserveWhitespaces>
+    <c-col xs="12">
+        <c-card class="mb-12">
+            <c-card-header class="horizontalHeader">
+                <c-col md="2">
+                    <strong>User Details</strong>     
+                </c-col>
+                <c-col md="2">
+                    <button cButton color="primary"
+                        size="sm" (click)="createUser()">New User</button>
+                </c-col>
+                <c-col md="8"></c-col>
+            </c-card-header>
+
+            <c-card-body>
+                <table [hover]="true" cTable [responsive]="true">
+                    <thead>
+                        <tr>
+                            <th scope="col">Username</th>
+                            <th scope="col">Email Address</th>
+                            <th scope="col">Phone Number</th>
+                            <th scope="col">Role</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row"></th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td> 
+                                <button [active]="false" [color]="'warning'"
+                                    [disabled]="false" cButton class="me-1 actionButton" size="sm">
+                                    Edit
+                                </button>
+                                <button [active]="false" [color]="'danger'"
+                                    [disabled]="false" cButton class="me-1 actionButton" size="sm">
+                                    Delete
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </c-card-body>
+        </c-card>
+    </c-col>
+</c-row>
+<br>
+<c-row ngPreserveWhitespaces>
+    <c-col xs="12">
+        <c-card class="mb-12">
+            <c-card-header class="horizontalHeader">
+                <c-col md="2">
+                    <strong>Zone Details</strong>     
+                </c-col>
+                <c-col md="2">
+                    <button cButton color="primary"
+                        size="sm" (click)="createZone()" >New Zone</button>
+                </c-col>
+                <c-col md="8"></c-col>
+            </c-card-header>
+
+            <c-card-body>
+                <table [hover]="true" cTable [responsive]="true">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Zone Name</th>
+                            <th scope="col">Zone Status</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row"></th>
+                            <td></td>
+                            <td></td>
+                            <td> 
+                                <button [active]="false" [color]="'warning'"
+                                    [disabled]="false" cButton class="me-1 actionButton" size="sm">
+                                    Activate
+                                </button>
+                                <button [active]="false" [color]="'danger'"
+                                    [disabled]="false" cButton class="me-1 actionButton" size="sm">
+                                    Deactivate
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </c-card-body>
+        </c-card>
+    </c-col>
+</c-row>
+<br>
+<c-row ngPreserveWhitespaces>
+    <c-col xs="12">
+        <c-card class="mb-12">
+            <c-card-header class="horizontalHeader">
+                <c-col md="2">
+                    <strong>Log Details</strong>     
+                </c-col>
+                <c-col md="10"></c-col>
+            </c-card-header>
+
+            <c-card-body>
+                <table [hover]="true" cTable [responsive]="true">
+                    <thead>
+                        <tr>
+                            <th scope="col">Organization Name</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row"></th>
+                            <td> 
+                                <button [active]="false" [color]="'warning'"
+                                    [disabled]="false" cButton class="me-1 actionButton" size="sm">
+                                    Edit
+                                </button>
+                                <button [active]="false" [color]="'danger'"
+                                    [disabled]="false" cButton class="me-1 actionButton" size="sm">
+                                    Delete
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </c-card-body>
+        </c-card>
+    </c-col>
+</c-row>
