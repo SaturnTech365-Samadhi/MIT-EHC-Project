@@ -72,10 +72,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row"></th>
-                            <td></td>
-                            <td></td>
+                        <tr *ngFor="let Zone of getZones">
+                            <th scope="row">{{Zone.Id}}</th>
+                            <td>{{Zone.Name}}</td>
+                            <td>{{Zone.Status}}</td>
                             <td> 
                                 <button [active]="false" [color]="'warning'"
                                     [disabled]="false" cButton class="me-1 actionButton" size="sm">

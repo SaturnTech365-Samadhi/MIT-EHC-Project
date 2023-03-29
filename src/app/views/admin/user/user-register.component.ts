@@ -9,6 +9,8 @@ import {AdminService} from 'src/app/services/admin.service'
 })
 export class UserRegisterComponent implements OnInit {
   
+  customStylesValidated = false;
+
   public data: any =  {
     username : 'test',
     email : 'test@email.com',
@@ -17,6 +19,7 @@ export class UserRegisterComponent implements OnInit {
 
   constructor(private adminService: AdminService, private route: ActivatedRoute){}
   ngOnInit(): void {
+
     this.register()
   }
 
@@ -30,5 +33,39 @@ export class UserRegisterComponent implements OnInit {
         alert("failed");
       }
     });
+}
+
+onSubmit(form: any) {
+  this.customStylesValidated = true;
+  if (!form.invalid) {
+    var isActive = false;
+    if (form.value.isActive != "") {
+      isActive = true;
+    }
+
+    var data = {
+      // UserID :form.value.
+      FirstName:form.value.FirstName,
+      LastName:form.value.LastName,
+      TelNo:form.value.TelNo,
+      email:form.value.email,
+      House_No:form.value.House_No,
+      Street_Address:form.value.Street_Address,
+      City:form.value.City,
+      User_name:form.value.User_name,
+      user_Password:form.value.user_Password,
+      RoleID:form.value.RoleID,
+   }
+    this.adminService.registerUser(data)
+      .subscribe((result) => {
+        if (result) {
+          form.reset();
+          this.customStylesValidated = false;
+          alert("success");
+        } else {
+          alert("failed");
+        }
+      });
+  }
 }
 }

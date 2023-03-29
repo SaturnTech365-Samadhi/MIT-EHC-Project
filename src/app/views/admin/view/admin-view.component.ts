@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminService } from 'src/app/services/admin.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -7,8 +8,13 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./admin-view.component.scss']
 })
 export class AdminViewComponent implements OnInit  {
+
+  public getZones:any;
+  
+  constructor(private adminService: AdminService) { }
+
   ngOnInit(): void {
-   
+    this.getZoneDetails(); 
   }
 
   createUser(){
@@ -20,4 +26,11 @@ export class AdminViewComponent implements OnInit  {
     location.href = environment.baseUrl + `admin/zone-register`;
     console.log(environment.baseUrl + `admin/zone-register`);
   }
+
+  getZoneDetails() {
+    this.adminService.getZoneDetails()
+      .subscribe(data => {
+        this.getZones = data;
+      });
+   }
 }

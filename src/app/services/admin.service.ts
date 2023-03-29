@@ -12,9 +12,19 @@ export class AdminService {
   constructor(private httpClientAdapterService: HttpClientAdapterService) { }
 
   register(data: any) {
-    var url: string = this.url + "register.php";
+    var url: string = this.url + "bee_box/c/";
     //return this.httpClientAdapterService.post(url, undefined, undefined, data);
    
     return this.httpClientAdapterService.post(url, undefined, undefined, data);
+  }
+
+  registerUser(data: any) {
+    var url: string = this.url + "user/c/";
+    return this.httpClientAdapterService.post(url, undefined, undefined, data);
+  }
+
+  getZoneDetails(){
+    var url: string = this.url + "zone/r/";
+    return this.httpClientAdapterService.get(url, undefined, undefined);
   }
 }
