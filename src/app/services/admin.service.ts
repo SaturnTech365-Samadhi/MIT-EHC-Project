@@ -11,20 +11,41 @@ export class AdminService {
 
   constructor(private httpClientAdapterService: HttpClientAdapterService) { }
 
-  register(data: any) {
-    var url: string = this.url + "bee_box/c/";
-    //return this.httpClientAdapterService.post(url, undefined, undefined, data);
-   
-    return this.httpClientAdapterService.post(url, undefined, undefined, data);
-  }
+  // register(data: any) {
+  //   var url: string = this.url + "bee_box/c/";
+  //   //return this.httpClientAdapterService.post(url, undefined, undefined, data);
+  //   return this.httpClientAdapterService.post(url, undefined, undefined, data);
+  // }
 
-  registerUser(data: any) {
-    var url: string = this.url + "user/c/";
-    return this.httpClientAdapterService.post(url, undefined, undefined, data);
+  // registerUser(data: any) {
+  //   var url: string = this.url + "user/c/";
+  //   return this.httpClientAdapterService.post(url, undefined, undefined, data);
+  // }
+
+  // registerZone(){
+  //   var url: string = this.url + "zone/c/";
+  //   return this.httpClientAdapterService.post(url, undefined, undefined);
+  // }
+
+  getUserDetails(){
+    var url: string = "https://mocki.io/v1/4957e7d5-4318-46eb-8271-8b5b07942fc7";
+    return this.httpClientAdapterService.get(url, undefined, undefined);
   }
 
   getZoneDetails(){
-    var url: string = this.url + "zone/r/";
+    var url: string = "https://mocki.io/v1/b4baf57e-ddc9-42fc-a333-325dfb943f96";
+    return this.httpClientAdapterService.get(url, undefined, undefined);
+  }
+
+  getLogByUserDetails(){
+    var url: string = "https://mocki.io/v1/44b741be-41d0-4e25-84f0-011e7d63f31b";
+    return this.httpClientAdapterService.get(url, undefined, undefined);
+  }
+
+  getLogBySystemDetails(){
+    var url: string = "https://mocki.io/v1/798c9cb6-e34a-4141-b6fe-bf959d519e60";
     return this.httpClientAdapterService.get(url, undefined, undefined);
   }
 }
+
+  

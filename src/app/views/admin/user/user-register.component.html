@@ -5,11 +5,10 @@
                 <strong>User Registration</strong>
             </c-card-header>
             <c-card-body>
-                <form #registerForm (ngSubmit)="onSubmit(registerForm)" [validated]="customStylesValidated" cForm
-                class="row g-3 needs-validation">
+                <form cForm #registerForm="ngForm" [validated]="customStylesValidated" class="row g-3 needs-validation">
                     <c-col md="3">
                         <label cLabel>First Name</label>
-                        <input cFormControl required type="text" name="FirstName" required maxlength="100" ngModel >
+                        <input cFormControl required type="text" name="FirstName" required maxlength="100" >
                         <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
                     </c-col>
                     <c-col [md]="9">

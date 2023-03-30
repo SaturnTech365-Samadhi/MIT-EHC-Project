@@ -14,43 +14,45 @@ export class ZoneRegisterComponent implements OnInit {
     email : 'test@email.com',
     password : '123MyPassword!'
   };
-  public visible = false;
+  public visible1 = false;
+  public visible2 = false;
+  public visible3 = false;
 
   constructor(private adminService: AdminService, private route: ActivatedRoute){}
   ngOnInit(): void {
-    this.register()
+    // this.register()
   }
 
   toggleLiveDemo1() {
-    this.visible = !this.visible;
+    this.visible1 = !this.visible1;
   }
 
   toggleLiveDemo2() {
-    this.visible = !this.visible;
+    this.visible2 = !this.visible2;
   }
 
   toggleLiveDemo3() {
-    this.visible = !this.visible;
+    this.visible3 = !this.visible3;
   }
 
   handleLiveDemoChange1(event: any) {
-    this.visible = event;
+    this.visible1 = event;
   }
   handleLiveDemoChange2(event: any) {
-    this.visible = event;
+    this.visible2 = event;
   }
   handleLiveDemoChange3(event: any) {
-    this.visible = event;
+    this.visible3 = event;
   }
-  register(){
-    this.adminService.register(this.data)
-    .subscribe((result) => {
-      if (result) {
-        console.log(result);
-        alert("success");
-      } else {
-        alert("failed");
-      }
-    });
-}
+//   register(){
+//     this.adminService.register(this.data)
+//     .subscribe((result) => {
+//       if (result) {
+//         console.log(result);
+//         alert("success");
+//       } else {
+//         alert("failed");
+//       }
+//     });
+// }
 }

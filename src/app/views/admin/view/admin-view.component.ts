@@ -9,12 +9,19 @@ import { environment } from 'src/environments/environment';
 })
 export class AdminViewComponent implements OnInit  {
 
-  public getZones:any;
+  public getZones:any = [];
+  public getUsers:any = [];
+  public getLogU:any = [];
+  public getLogS:any = [];
   
   constructor(private adminService: AdminService) { }
 
   ngOnInit(): void {
+    this.getUserDetails(); 
     this.getZoneDetails(); 
+    this.getLogByUserDetails();
+    this.getLogBySysemDetails();
+
   }
 
   createUser(){
@@ -27,10 +34,38 @@ export class AdminViewComponent implements OnInit  {
     console.log(environment.baseUrl + `admin/zone-register`);
   }
 
-  getZoneDetails() {
+  // getZoneDetails() {
+  //   this.adminService.getZoneDetails()
+  //     .subscribe(data => {
+  //       this.getZones = data;
+  //     });
+  //  }
+
+   getUserDetails() {
+    this.adminService.getUserDetails()
+      .subscribe(data => {
+        this.getUsers = data;
+      });
+   }
+
+   getZoneDetails() {
     this.adminService.getZoneDetails()
       .subscribe(data => {
         this.getZones = data;
+      });
+   }
+
+   getLogByUserDetails() {
+    this.adminService.getLogByUserDetails()
+      .subscribe(data => {
+        this.getLogU = data;
+      });
+   }
+
+   getLogBySysemDetails() {
+    this.adminService.getLogBySystemDetails()
+      .subscribe(data => {
+        this.getLogS = data;
       });
    }
 }

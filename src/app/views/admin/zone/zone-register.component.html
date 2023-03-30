@@ -5,7 +5,7 @@
                 <strong>Create Zone</strong>
             </c-card-header>
             <c-card-body>
-                <form cForm class="row g-3 needs-validation">
+                <form cForm #registerForm="ngForm" class="row g-3 needs-validation">
                     <c-col md="3">
                         <label cLabel>Zone Id</label>
                         <input cFormControl required type="text" name="customerName">
@@ -30,7 +30,7 @@
                     </c-col>
                     <c-col [md]="12">
                         <button (click)="toggleLiveDemo1()" cButton color="light" size="sm">Add Camera</button>
-                        <c-modal id="liveDemoModal1" [visible]="visible" (visibleChange)="handleLiveDemoChange1($event)">
+                        <c-modal id="liveDemoModal1" [visible]="visible1" (visibleChange)="handleLiveDemoChange1($event)">
                           <c-modal-header>
                             <h5 cModalTitle>Add Camera</h5>
                             <button (click)="toggleLiveDemo1()" cButtonClose></button>
@@ -72,7 +72,7 @@
                     </c-col>
                     <c-col [md]="12">
                         <button (click)="toggleLiveDemo2()" cButton color="light" size="sm">Add Bee Box</button>
-                        <c-modal id="liveDemoModal2" [visible]="visible" (visibleChange)="handleLiveDemoChange2($event)">
+                        <c-modal id="liveDemoModal2" [visible]="visible2" (visibleChange)="handleLiveDemoChange2($event)">
                           <c-modal-header>
                             <h5 cModalTitle>Add Bee Box</h5>
                             <button (click)="toggleLiveDemo2()" cButtonClose></button>
@@ -107,7 +107,7 @@
                     </c-col>
                     <c-col [md]="12">
                         <button (click)="toggleLiveDemo3()" cButton color="light" size="sm">Add Speaker</button>
-                        <c-modal id="liveDemoModal3" [visible]="visible" (visibleChange)="handleLiveDemoChange3($event)">
+                        <c-modal id="liveDemoModal3" [visible]="visible3" (visibleChange)="handleLiveDemoChange3($event)">
                           <c-modal-header>
                             <h5 cModalTitle>Add Speaker</h5>
                             <button (click)="toggleLiveDemo3()" cButtonClose></button>
@@ -142,7 +142,7 @@
                         </c-modal>
                     </c-col>
                     <c-col md="4">
-                        <button cButton (click)="register()" class="me-1 actionButton" color="primary" type="submit">
+                        <button cButton  class="me-1 actionButton" color="primary" type="submit">
                             Register
                         </button>
                     </c-col>
@@ -153,3 +153,4 @@
         </c-card>
     </c-col>
 </c-row>
+

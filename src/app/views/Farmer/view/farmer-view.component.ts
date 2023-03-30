@@ -20,16 +20,16 @@ export class FarmerViewComponent implements OnInit {
     
   }
 
-  register(){
-    console.log(this.data);
-    this.adminService.register(this.data)
-    .subscribe((result) => {
-      if (result) {
-        console.log(result);
-        alert("success");
-      } else {
-        alert("failed");
-      }
-    });
-}
+//   register(){
+//     console.log(this.data);
+//     this.adminService.register(this.data)
+//     .subscribe((result) => {
+//       if (result) {
+//         console.log(result);
+//         alert("success");
+//       } else {
+//         alert("failed");
+//       }
+//     });
+// }
 }

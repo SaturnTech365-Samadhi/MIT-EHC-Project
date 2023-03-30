@@ -13,18 +13,12 @@ import { CardModule, TableModule } from '@coreui/angular';
 @NgModule({
   declarations: [VideoStreamingComponent],
   imports: [
-    // BrowserModule,
     VgCoreModule,
     VgControlsModule,
     VgOverlayPlayModule,
     VgBufferingModule,
     VideoStreamingRoutingModule,
-    TableModule,
     CardModule
-    
-    // VideoStreamingComponent
-  ],
-  providers: [],
-//   bootstrap: [videoStreamingComponent],
+  ]
 })
 export class VideoStreamingModule {}

@@ -11,21 +11,21 @@ export const navItems: INavData[] = [
   //   url: '/dashboard',
   //   iconComponent: { name: 'cil-speedometer' },
   // },
+  // {
+  //   name: 'Login',
+  //   url: '/login',
+  //   iconComponent: { name: 'cil-drop' }
+  // },
   {
-    name: 'Login',
-    url: '/login',
+    name: 'Farmer',
+    url: '/farmer',
     iconComponent: { name: 'cil-drop' }
   },
-  // {
-  //   name: 'Farmer',
-  //   url: '/farmer',
-  //   iconComponent: { name: 'cil-drop' }
-  // },
-  // {
-  //   name: 'Admin',
-  //   url: '/admin',
-  //   iconComponent: { name: 'cil-drop' }
-  // },
+  {
+    name: 'Admin',
+    url: '/admin',
+    iconComponent: { name: 'cil-drop' }
+  },
   // {s
   //   title: true,
   //   name: 'Theme'
@@ -35,12 +35,12 @@ export const navItems: INavData[] = [
   //   url: '/theme/colors',
   //   iconComponent: { name: 'cil-drop' }
   // },
-  {
-    name: 'Live Streaming',
-    url: '/videoStreaming',
-    iconComponent: { name: 'cil-drop' }
-  },
   // {
+  //   name: 'Live Streaming',
+  //   url: '/videoStreaming',
+  //   iconComponent: { name: 'cil-drop' }
+  // },
+  // // {
   //   name: 'Components',
   //   title: true
   // },
