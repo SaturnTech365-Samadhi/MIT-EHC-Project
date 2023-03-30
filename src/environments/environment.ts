@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   baseUrl: 'https://localhost:4200/#/',
-  apiUrl: 'http://localhost/ECHO-Backend/api/c.php/'
+  apiUrl: 'http://localhost/api/'
+  //apiUrl: 'http://localhost/ECHO-Backend/api/c.php/'
 };
 
 /*
