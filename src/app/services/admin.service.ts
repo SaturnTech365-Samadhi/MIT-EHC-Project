@@ -11,21 +11,21 @@ export class AdminService {
 
   constructor(private httpClientAdapterService: HttpClientAdapterService) { }
 
-  // register(data: any) {
-  //   var url: string = this.url + "bee_box/c/";
-  //   //return this.httpClientAdapterService.post(url, undefined, undefined, data);
-  //   return this.httpClientAdapterService.post(url, undefined, undefined, data);
-  // }
+  register(data: any) {
+    var url: string = this.url + "register.php";
+    //return this.httpClientAdapterService.post(url, undefined, undefined, data);
+    return this.httpClientAdapterService.post(url, undefined, undefined, data);
+  }
 
   // registerUser(data: any) {
   //   var url: string = this.url + "user/c/";
   //   return this.httpClientAdapterService.post(url, undefined, undefined, data);
   // }
 
-  // registerZone(){
-  //   var url: string = this.url + "zone/c/";
-  //   return this.httpClientAdapterService.post(url, undefined, undefined);
-  // }
+  registerZone(){
+    var url: string = this.url + "zone/c/";
+    return this.httpClientAdapterService.post(url, undefined, undefined);
+  }
 
   getUserDetails(){
     var url: string = "https://mocki.io/v1/4957e7d5-4318-46eb-8271-8b5b07942fc7";

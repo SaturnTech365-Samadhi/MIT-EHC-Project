@@ -34,37 +34,39 @@ export class UserRegisterComponent implements OnInit {
 //     });
 // }
 
-// onSubmit(form: any) {
-//   this.customStylesValidated = true;
-//   if (!form.invalid) {
-//     var isActive = false;
-//     if (form.value.isActive != "") {
-//       isActive = true;
-//     }
+onSubmit(form: any) {
+  this.customStylesValidated = true;
+  if (!form.invalid) {
+    var isActive = false;
+    if (form.value.isActive != "") {
+      isActive = true;
+    }
 
-//     var data = {
-//       // UserID :form.value.
-//       FirstName:form.value.FirstName,
-//       LastName:form.value.LastName,
-//       TelNo:form.value.TelNo,
-//       email:form.value.email,
-//       House_No:form.value.House_No,
-//       Street_Address:form.value.Street_Address,
-//       City:form.value.City,
-//       User_name:form.value.User_name,
-//       user_Password:form.value.user_Password,
-//       RoleID:form.value.RoleID,
-//    }
-//     this.adminService.registerUser(data)
-//       .subscribe((result) => {
-//         if (result) {
-//           form.reset();
-//           this.customStylesValidated = false;
-//           alert("success");
-//         } else {
-//           alert("failed");
-//         }
-//       });
-//   }
-// }
+    var data = {
+      //UserID :form.value.
+      FirstName:form.value.FirstName,
+      LastName:form.value.LastName,
+      TelNo:form.value.TelNo,
+      email:form.value.email,
+      House_No:form.value.House_No,
+      Street_Address:form.value.Street_Address,
+      City:form.value.City,
+      User_name:form.value.User_name,
+      user_Password:form.value.user_Password,
+      RoleID:form.value.RoleID,
+   }
+
+
+    this.adminService.register(data)
+      .subscribe((result) => {
+        if (result) {
+          form.reset();
+          this.customStylesValidated = false;
+          alert("success");
+        } else {
+          alert("failed");
+        }
+      });
+  }
+}
 }
