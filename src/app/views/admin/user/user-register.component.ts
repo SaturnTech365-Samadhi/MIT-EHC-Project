@@ -54,6 +54,7 @@ console.log(form.value.TelNo);
       User_name:form.value.User_name,
       user_Password:form.value.user_Password,
       RoleID:"1",
+      ZoneID:"2"
    }
 
     this.adminService.register(data)

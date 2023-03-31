@@ -39,7 +39,7 @@
                         <label cLabel>House No</label>
                         <input cFormControl type="text" maxlength="50" name="House_No" ngModel/>
                         <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
-                        <c-form-feedback [valid]="false">Please provide a valid streetNo.</c-form-feedback>
+                        <c-form-feedback [valid]="false">Please provide a valid house no.</c-form-feedback>
                     </c-col>
                     <c-col [md]="9">
                     </c-col>
@@ -55,7 +55,7 @@
                         <label cLabel>City</label>
                         <input cFormControl type="text" maxlength="100" name="City"ngModel />
                         <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
-                        <c-form-feedback [valid]="false">Please provide a valid Street Address01.</c-form-feedback>
+                        <c-form-feedback [valid]="false">Please provide a valid city</c-form-feedback>
                     </c-col>
                     <c-col [md]="9">
                     </c-col>
@@ -63,7 +63,7 @@
                         <label cLabel>Username</label>
                         <input cFormControl type="text" maxlength="100" name="User_name" ngModel/>
                         <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
-                        <c-form-feedback [valid]="false">Please provide a valid Street Address02.</c-form-feedback>
+                        <c-form-feedback [valid]="false">Please provide a valid username</c-form-feedback>
                     </c-col>
                     <c-col [md]="9">
                     </c-col>
@@ -71,18 +71,29 @@
                         <label cLabel>Password</label>
                         <input cFormControl type="text" maxlength="50" name="user_Password"ngModel />
                         <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
-                        <c-form-feedback [valid]="false">Please provide a valid Suburb.</c-form-feedback>
+                        <c-form-feedback [valid]="false">Please provide a valid password.</c-form-feedback>
                     </c-col>
                     <c-col [md]="9">
                     </c-col>
-                    <c-col md="3">
+                    <c-col md="4">
                         <label cLabel>User Role</label>
                         <select cSelect>
                             <option >Farmer</option>
                             <option >Admin</option>
                         </select>
                         <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
-                        <c-form-feedback [valid]="false">Please provide a valid region.</c-form-feedback>
+                        <c-form-feedback [valid]="false">Please provide a valid role.</c-form-feedback>
+                    </c-col>
+                    <c-col md="4">
+                        <label cLabel>Zone</label>
+                        <select cSelect>
+                            <option >Zone 1</option>
+                            <option >Zone 2</option>
+                            <option >Zone 3</option>
+                            <option >Zone 4</option>
+                        </select>
+                        <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+                        <c-form-feedback [valid]="false">Please provide a valid zone.</c-form-feedback>
                     </c-col>
                     <c-col md="12">
                         <button cButton class="me-1" color="primary" type="submit">
