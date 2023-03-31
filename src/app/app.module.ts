@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CarouselModule } from '@coreui/angular';
 import { NavbarModule } from '@coreui/angular';
+import { VideoStreamingModule } from './views/videoStreaming/videoStreaming.module';
 
 import { MatCardModule } from '@angular/material/card';
 import {
@@ -91,7 +92,8 @@ const APP_CONTAINERS = [
     CardModule,
     CarouselModule,
     NavbarModule,
-    HttpClientModule
+    HttpClientModule,
+    VideoStreamingModule,
   ],
   providers: [
     {

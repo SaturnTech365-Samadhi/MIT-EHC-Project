@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'app-vdo-player',
+    selector: 'video-streaming',
     templateUrl: 'videoStreaming.component.html'
 //   styleUrls: ['videoStreaming.component.scss']
 })
@@ -10,6 +10,7 @@ export class VideoStreamingComponent implements OnInit {
         {
           name: 'Video one',
           src: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+          // src: 'http://127.0.0.1:8000/video_feed',
           type: 'video/mp4'
         },
         // {

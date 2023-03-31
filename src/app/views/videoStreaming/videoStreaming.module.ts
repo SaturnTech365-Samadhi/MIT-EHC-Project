@@ -19,6 +19,7 @@ import { CardModule, TableModule } from '@coreui/angular';
     VgBufferingModule,
     VideoStreamingRoutingModule,
     CardModule
-  ]
+  ],
+  exports: [VideoStreamingComponent],
 })
 export class VideoStreamingModule {}
