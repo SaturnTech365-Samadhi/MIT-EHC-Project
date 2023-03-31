@@ -11,28 +11,10 @@ export class UserRegisterComponent implements OnInit {
   
   customStylesValidated = false;
 
-  public data: any =  {
-    username : 'test',
-    email : 'test@email.com',
-    password : '123MyPassword!'
-  };
-
   constructor(private adminService: AdminService, private route: ActivatedRoute){}
   ngOnInit(): void {
 
   }
-
-//   register(){
-//     this.adminService.register(this.data)
-//     .subscribe((result) => {
-//       if (result) {
-//         console.log(result);
-//         alert("success");
-//       } else {
-//         alert("failed");
-//       }
-//     });
-// }
 
 onSubmit(form: any) {
   this.customStylesValidated = true;

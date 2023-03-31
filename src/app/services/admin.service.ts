@@ -28,6 +28,12 @@ export class AdminService {
     return this.httpClientAdapterService.post(url, undefined, undefined);
   }
 
+  AddEmergency(data: any) {
+    var url: string = this.url + "addEmergency.php";
+    console.log(data);
+    return this.httpClientAdapterService.post(url, undefined, undefined, data);
+  }
+
   getUserDetails(){
     var url: string = "https://mocki.io/v1/4957e7d5-4318-46eb-8271-8b5b07942fc7";
     return this.httpClientAdapterService.get(url, undefined, undefined);
