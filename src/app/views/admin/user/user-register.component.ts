@@ -41,7 +41,7 @@ onSubmit(form: any) {
     if (form.value.isActive != "") {
       isActive = true;
     }
-
+console.log(form.value.TelNo);
     var data = {
       //UserID :form.value.
       FirstName:form.value.FirstName,
@@ -53,12 +53,13 @@ onSubmit(form: any) {
       City:form.value.City,
       User_name:form.value.User_name,
       user_Password:form.value.user_Password,
-      RoleID:form.value.RoleID,
+      RoleID:"1",
    }
 
-
     this.adminService.register(data)
+    
       .subscribe((result) => {
+        console.log(data);
         if (result) {
           form.reset();
           this.customStylesValidated = false;
@@ -69,4 +70,9 @@ onSubmit(form: any) {
       });
   }
 }
+
+onReset() {
+  this.customStylesValidated = false;
+}
+
 }

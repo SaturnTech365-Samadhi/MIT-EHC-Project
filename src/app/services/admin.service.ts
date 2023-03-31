@@ -12,7 +12,8 @@ export class AdminService {
   constructor(private httpClientAdapterService: HttpClientAdapterService) { }
 
   register(data: any) {
-    var url: string = this.url + "register.php";
+    var url: string = this.url + "registerUser.php";
+    console.log(data);
     //return this.httpClientAdapterService.post(url, undefined, undefined, data);
     return this.httpClientAdapterService.post(url, undefined, undefined, data);
   }
