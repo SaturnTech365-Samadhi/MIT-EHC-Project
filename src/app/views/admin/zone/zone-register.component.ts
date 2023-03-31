@@ -44,6 +44,20 @@ export class ZoneRegisterComponent implements OnInit {
   handleLiveDemoChange3(event: any) {
     this.visible3 = event;
   }
+
+  saveCamera() {
+    const cameraData = {
+      CameraID: this.cameraId,
+      SerialNo: this.serialNo,
+      ModelNo: this.modelNo,
+      ZoneID: this.zoneId
+    };
+    this.adminService.addCamera(cameraData).subscribe((response) => {
+      console.log(response);
+    });
+    this.toggleLiveDemo1(); // close the modal
+  }
+  
 //   register(){
 //     this.adminService.register(this.data)
 //     .subscribe((result) => {
