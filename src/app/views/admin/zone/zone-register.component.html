@@ -5,7 +5,7 @@
                 <strong>Create Zone</strong>
             </c-card-header>
             <c-card-body>
-                <form cForm #registerForm="ngForm" class="row g-3 needs-validation">
+                <form cForm #ZoneRegisterForm="ngForm" (ngSubmit)="onZoneSubmit(ZoneRegisterForm)" [validated]="customStylesValidated" class="row g-3 needs-validation">
                     <c-col md="3">
                         <label cLabel>Zone Id</label>
                         <input cFormControl required type="text" name="ZoneId">
@@ -28,6 +28,11 @@
                     </c-col>
                     <c-col [md]="9">
                     </c-col>
+                    <c-col md="4">
+                      <button cButton  class="me-1 actionButton" color="primary" type="submit">
+                          Register
+                      </button>
+                  </c-col>
                     <c-col [md]="12">
                         <button (click)="toggleLiveDemo1()" cButton color="light" size="sm">Add Camera</button>
                         <c-modal id="liveDemoModal1" [visible]="visible1" (visibleChange)="handleLiveDemoChange1($event)">

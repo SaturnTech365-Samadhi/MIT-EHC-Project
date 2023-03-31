@@ -45,6 +45,19 @@ export class ZoneRegisterComponent implements OnInit {
     this.visible3 = event;
   }
 
+  onZoneSubmit(form:any){
+
+    var data ={
+      ZoneID : form.value.ZoneID,
+      ZoneName : form.value.ZoneName,
+    }
+    
+  }
+
+
+
+
+  
   saveCamera() {
     const cameraData = {
       CameraID: this.cameraId,
