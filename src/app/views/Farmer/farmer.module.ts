@@ -7,7 +7,7 @@ import { ImgModule, ProgressModule, SpinnerModule, TableModule, UtilitiesModule 
 import { ChartjsModule } from '@coreui/angular-chartjs';
 
 import { HttpClientModule } from '@angular/common/http';
-
+import { VideoStreamingModule } from '../videoStreaming/videoStreaming.module'
 
 @NgModule({
   declarations: [
@@ -23,8 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     UtilitiesModule,
     ImgModule,
     ChartjsModule,
-    HttpClientModule
-
+    HttpClientModule,
+    VideoStreamingModule,
   ]
 })
 export class FarmerModule { }

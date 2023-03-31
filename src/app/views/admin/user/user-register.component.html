@@ -5,24 +5,24 @@
                 <strong>User Registration</strong>
             </c-card-header>
             <c-card-body>
-                <form cForm #registerForm="ngForm" [validated]="customStylesValidated" class="row g-3 needs-validation">
+                <form cForm #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)" [validated]="customStylesValidated" class="row g-3 needs-validation">
                     <c-col md="3">
                         <label cLabel>First Name</label>
-                        <input cFormControl required type="text" name="FirstName" required maxlength="100" >
+                        <input cFormControl required type="text" name="FirstName" required maxlength="100" ngModel >
                         <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
                     </c-col>
                     <c-col [md]="9">
                     </c-col>
                     <c-col md="3">
                         <label cLabel>Last Name</label>
-                        <input cFormControl required type="text" name="LastName">
+                        <input cFormControl required type="text" name="LastName" ngModel>
                         <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
                     </c-col>
                     <c-col [md]="9">
                     </c-col>
                     <c-col md="3">
                         <label cLabel for="validationCustom01">Email Address</label>
-                        <input cFormControl id="validationCustom01" required type="email" name="email" />
+                        <input cFormControl id="validationCustom01" required type="email" name="email" ngModel/>
                         <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
                         <c-form-feedback [valid]="false">Please enter valid Email Address!</c-form-feedback>
                     </c-col>
@@ -30,22 +30,22 @@
                     </c-col>
                     <c-col md="3">
                         <label cLabel>Phone Number</label>
-                        <input cFormControl type="text" required name="TelNo" />
+                        <input cFormControl type="text" required name="TelNo" ngModel/>
                         <c-form-feedback [valid]="false">Please provide a Phone Number!</c-form-feedback>
                     </c-col>
                     <c-col [md]="9">
                     </c-col>
                     <c-col md="3">
                         <label cLabel>House No</label>
-                        <input cFormControl type="text" maxlength="50" name="House_No" />
+                        <input cFormControl type="text" maxlength="50" name="House_No" ngModel/>
                         <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
-                        <c-form-feedback [valid]="false">Please provide a valid streetNo.</c-form-feedback>
+                        <c-form-feedback [valid]="false">Please provide a valid house no.</c-form-feedback>
                     </c-col>
                     <c-col [md]="9">
                     </c-col>
                     <c-col md="3">
                         <label cLabel>Address</label>
-                        <input cFormControl type="text" maxlength="100" name="Street_Address" />
+                        <input cFormControl type="text" maxlength="100" name="Street_Address" ngModel />
                         <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
                         <c-form-feedback [valid]="false">Please provide a valid Street Address01.</c-form-feedback>
                     </c-col>
@@ -53,40 +53,54 @@
                     </c-col>
                     <c-col md="3">
                         <label cLabel>City</label>
-                        <input cFormControl type="text" maxlength="100" name="City" />
+                        <input cFormControl type="text" maxlength="100" name="City"ngModel />
                         <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
-                        <c-form-feedback [valid]="false">Please provide a valid Street Address01.</c-form-feedback>
+                        <c-form-feedback [valid]="false">Please provide a valid city</c-form-feedback>
                     </c-col>
                     <c-col [md]="9">
                     </c-col>
                     <c-col md="3">
                         <label cLabel>Username</label>
-                        <input cFormControl type="text" maxlength="100" name="User_name" />
+                        <input cFormControl type="text" maxlength="100" name="User_name" ngModel/>
                         <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
-                        <c-form-feedback [valid]="false">Please provide a valid Street Address02.</c-form-feedback>
+                        <c-form-feedback [valid]="false">Please provide a valid username</c-form-feedback>
                     </c-col>
                     <c-col [md]="9">
                     </c-col>
                     <c-col md="3">
                         <label cLabel>Password</label>
-                        <input cFormControl type="text" maxlength="50" name="user_Password" />
+                        <input cFormControl type="text" maxlength="50" name="user_Password"ngModel />
                         <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
-                        <c-form-feedback [valid]="false">Please provide a valid Suburb.</c-form-feedback>
+                        <c-form-feedback [valid]="false">Please provide a valid password.</c-form-feedback>
                     </c-col>
                     <c-col [md]="9">
                     </c-col>
-                    <c-col md="3">
+                    <c-col md="4">
                         <label cLabel>User Role</label>
                         <select cSelect>
-                            <option name="RoleID" value="1">Farmer</option>
-                            <option name="RoleID" value="2">Admin</option>
+                            <option >Farmer</option>
+                            <option >Admin</option>
                         </select>
                         <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
-                        <c-form-feedback [valid]="false">Please provide a valid region.</c-form-feedback>
+                        <c-form-feedback [valid]="false">Please provide a valid role.</c-form-feedback>
+                    </c-col>
+                    <c-col md="4">
+                        <label cLabel>Zone</label>
+                        <select cSelect>
+                            <option >Zone 1</option>
+                            <option >Zone 2</option>
+                            <option >Zone 3</option>
+                            <option >Zone 4</option>
+                        </select>
+                        <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+                        <c-form-feedback [valid]="false">Please provide a valid zone.</c-form-feedback>
                     </c-col>
                     <c-col md="12">
                         <button cButton class="me-1" color="primary" type="submit">
                             Submit
+                          </button>
+                          <button (click)="onReset()" cButton color="secondary" type="reset">
+                            Reset
                           </button>
                     </c-col>
                 </form>
