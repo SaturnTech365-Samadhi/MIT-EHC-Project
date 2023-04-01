@@ -5,34 +5,31 @@
                 <strong>Create Zone</strong>
             </c-card-header>
             <c-card-body>
-                <form cForm #ZoneRegisterForm="ngForm">
-                    <c-col md="3">
-                        <label cLabel>Zone Id</label>
-                        <input cFormControl required type="text" name="ZoneId">
-                        <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
-                    </c-col>
-                    <c-col [md]="9">
-                    </c-col>
+                <form cForm #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
                     <c-col md="3">
                         <label cLabel>Zone Name</label>
-                        <input cFormControl required type="text" name="ZoneName">
+                        <input cFormControl type="text" name="ZoneName" ngModel>
                         <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
                     </c-col>
                     <c-col [md]="9">
                     </c-col>
                     <c-col md="3">
                         <label cLabel for="validationCustom01">Zone Area</label>
-                        <input cFormControl id="validationCustom01" required type="text" name="Area" />
+                        <input cFormControl id="validationCustom01" type="text" name="Area" ngModel/>
                         <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
                       
                     </c-col>
                     <c-col [md]="9">
                     </c-col>
+                    <br>
                     <c-col md="4">
                       <button cButton  class="me-1 actionButton" color="primary" type="submit">
                           Register
                       </button>
-                  </c-col>
+                    </c-col>
+                    <br>
+                  </form>
+                  <form cForm #CameraRegisterForm="ngForm" (ngSubmit)="onCameraSubmit(CameraRegisterForm)" [validated]="customStylesValidated" class="row g-3 needs-validation">
                     <c-col [md]="12">
                         <button (click)="toggleLiveDemo1()" cButton color="light" size="sm">Add Camera</button>
                         <c-modal id="liveDemoModal1" [visible]="visible1" (visibleChange)="handleLiveDemoChange1($event)">
@@ -47,21 +44,21 @@
                             </c-col>
                             <c-col md="3">
                                 <label cLabel>Serial No</label>
-                                <input cFormControl required type="text" name="SerialNo">
+                                <input cFormControl required type="text" name="SerialNo" ngModel>
                                 <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
                             </c-col>
                             <c-col [md]="9">
                             </c-col>
                             <c-col md="3">
                                 <label cLabel>Model No</label>
-                                <input cFormControl required type="text" name="ModelNo">
+                                <input cFormControl required type="text" name="ModelNo" ngModel>
                                 <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
                             </c-col>
                             <c-col [md]="9">
                             </c-col>
                             <c-col md="3">
                                 <label cLabel>Zone Id</label>
-                                <input cFormControl required type="text" name="ZoneID">
+                                <input cFormControl required type="text" name="ZoneID" ngModel>
                                 <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
                             </c-col>
                             <c-col [md]="9">
@@ -72,6 +69,11 @@
                           </c-modal-footer>
                         </c-modal>
                     </c-col>
+                    <br>
+                  </form>
+                  <br>
+                  <form cForm #BeeBoxRegisterForm="ngForm" (ngSubmit)="onBeeBoxSubmit(BeeBoxRegisterForm)" [validated]="customStylesValidated" class="row g-3 needs-validation">
+
                     <c-col [md]="12">
                         <button (click)="toggleLiveDemo2()" cButton color="light" size="sm">Add Bee Box</button>
                         <c-modal id="liveDemoModal2" [visible]="visible2" (visibleChange)="handleLiveDemoChange2($event)">
@@ -85,14 +87,14 @@
                             </c-col>
                             <c-col md="3">
                                 <label cLabel>Bee Box Name</label>
-                                <input cFormControl required type="text" name="BoxName">
+                                <input cFormControl required type="text" name="BoxName" ngModel>
                                 <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
                             </c-col>
                             <c-col [md]="9">
                             </c-col>
                             <c-col md="3">
                                 <label cLabel>Zone Id</label>
-                                <input cFormControl required type="text" name="ZoneID">
+                                <input cFormControl required type="text" name="ZoneID" ngModel>
                                 <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
                             </c-col>
                             <c-col [md]="9">
@@ -103,6 +105,11 @@
                           </c-modal-footer>
                         </c-modal>
                     </c-col>
+                    <br>
+                  </form>
+                  <br>
+                  <form cForm #SpeakerRegisterForm="ngForm" (ngSubmit)="onSpeakerSubmit(SpeakerRegisterForm)" [validated]="customStylesValidated" class="row g-3 needs-validation">
+
                     <c-col [md]="12">
                         <button (click)="toggleLiveDemo3()" cButton color="light" size="sm">Add Speaker</button>
                         <c-modal id="liveDemoModal3" [visible]="visible3" (visibleChange)="handleLiveDemoChange3($event)">
@@ -116,12 +123,12 @@
                             </c-col>
                             <c-col md="3">
                               <label cLabel>Model</label>
-                              <input cFormControl required type="text" name="Model">
+                              <input cFormControl required type="text" name="Model" ngModel>
                               <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
                           </c-col>
                             <c-col md="3">
                                 <label cLabel>Serial No</label>
-                                <input cFormControl required type="text" name="SerialNo">
+                                <input cFormControl required type="text" name="SerialNo" ngModel>
                                 <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
                             </c-col>
                             <c-col [md]="9">
@@ -129,7 +136,7 @@
                             
                             <c-col md="3">
                                 <label cLabel>Zone Id</label>
-                                <input cFormControl required type="text" name="ZoneID">
+                                <input cFormControl required type="text" name="ZoneID" ngModel>
                                 <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
                             </c-col>
                             <c-col [md]="9">
@@ -141,13 +148,12 @@
                         </c-modal>
                     </c-col>
                     <c-col md="4">
-                        <button cButton  class="me-1 actionButton" color="primary" type="submit">
-                            Register
-                        </button>
                     </c-col>
                     <c-col [md]="8">
                     </c-col>
                 </form>
+                    <br>
+                
             </c-card-body>
         </c-card>
     </c-col>

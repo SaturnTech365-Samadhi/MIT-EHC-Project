@@ -32,18 +32,19 @@ export class AdminService {
     return this.httpClientAdapterService.get(url, undefined, undefined);
   }
 
-  // viewUser(){
-  //   var url: string = this.url + "viewUser.php";
-  //   return this.httpClientAdapterService.get(url, undefined, undefined);
-  // }
+  viewUser(){
+    var url: string = this.url + "viewUsers.php";
+    return this.httpClientAdapterService.get(url, undefined, undefined);
+  }
 
   viewZone(){
     var url: string = this.url + "viewZones.php";
     return this.httpClientAdapterService.get(url, undefined, undefined);
   }
 
-  deleteUser(){
-
+  deleteUser(id:Number){
+    var url: string = this.url + "deleteUser.php/" + id;
+    return this.httpClientAdapterService.delete(url, undefined, undefined, undefined);
   }
 
   addZone(data:any){
@@ -109,10 +110,10 @@ export class AdminService {
 
   }
 
-  viewUser(){
-    var url: string = "https://mocki.io/v1/4957e7d5-4318-46eb-8271-8b5b07942fc7";
-    return this.httpClientAdapterService.get(url, undefined, undefined);
-  }
+  // viewUser(){
+  //   var url: string = "https://mocki.io/v1/4957e7d5-4318-46eb-8271-8b5b07942fc7";
+  //   return this.httpClientAdapterService.get(url, undefined, undefined);
+  // }
 
   // viewZone(){
   //   var url: string = "https://mocki.io/v1/b4baf57e-ddc9-42fc-a333-325dfb943f96";

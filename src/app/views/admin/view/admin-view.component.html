@@ -108,57 +108,6 @@
     </c-col>
 </c-row>
 <br>
-
-
-<c-row ngPreserveWhitespaces>
-    <c-col xs="12">
-        <c-card class="mb-12">
-            <c-card-header class="horizontalHeader">
-                <c-col md="2">
-                    <strong>User Details</strong>     
-                </c-col>
-                <c-col md="2">
-                    <button cButton color="primary"
-                        size="sm" (click)="createUser()">New User</button>
-                </c-col>
-                <c-col md="8"></c-col>
-            </c-card-header>
-
-            <c-card-body>
-                <table [hover]="true" cTable [responsive]="true">
-                    <thead>
-                        <tr>
-                            <th scope="col">Username</th>
-                            <th scope="col">Email Address</th>
-                            <th scope="col">Phone Number</th>
-                            <th scope="col">Role</th>
-                            <th scope="col">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let user of getUsers ">
-                            <th>{{user.username}}</th>
-                            <td>{{user.email}}</td>
-                            <td>{{user.phone}}</td>
-                            <td>{{user.role}}</td>
-                            <td> 
-                                <button [active]="false" [color]="'warning'"
-                                    [disabled]="false" cButton class="me-1 actionButton" size="sm">
-                                    Edit
-                                </button>
-                                <button [active]="false" [color]="'danger'"
-                                    [disabled]="false" cButton class="me-1 actionButton" size="sm">
-                                    Delete
-                                </button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </c-card-body>
-        </c-card>
-    </c-col>
-</c-row>
-<br>
 <c-row ngPreserveWhitespaces>
     <c-col xs="12">
         <c-card class="mb-12">
@@ -206,3 +155,56 @@
     </c-col>
 </c-row>
 <br>
+
+<c-row ngPreserveWhitespaces>
+    <c-col xs="12">
+        <c-card class="mb-12">
+            <c-card-header class="horizontalHeader">
+                <c-col md="2">
+                    <strong>User Details</strong>     
+                </c-col>
+                <c-col md="2">
+                    <button cButton color="primary"
+                        size="sm" (click)="createUser()">New User</button>
+                </c-col>
+                <c-col md="8"></c-col>
+            </c-card-header>
+
+            <c-card-body>
+                <table [hover]="true" cTable [responsive]="true">
+                    <thead>
+                        <tr>
+                            <th scope="col">Username</th>
+                            <th scope="col">Email Address</th>
+                            <th scope="col">Phone Number</th>
+                            <th scope="col">Role</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let user of getUsers ">
+                            <!-- <th>{{user.username}}</th>
+                            <td>{{user.email}}</td>
+                            <td>{{user.phone}}</td>
+                            <td>{{user.role}}</td> -->
+
+                            <th>{{user.FirstName}}</th>
+                            <td>{{user.email}}</td>
+                            <td>{{user.TelNo}}</td>
+                            <td>{{user.RoleID}}</td>
+                            
+                            <td> 
+                                <button [active]="false" [color]="'danger'" (click)="deleteUser(user.UserID)"
+                                    [disabled]="false" cButton class="me-1 actionButton" size="sm">
+                                    Delete
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </c-card-body>
+        </c-card>
+    </c-col>
+</c-row>
+<br>
+

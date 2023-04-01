@@ -71,4 +71,11 @@ export class AdminViewComponent implements OnInit  {
         this.getLogS = result;
       });
    }
+
+   deleteUser(userId: number) {
+    this.adminService.deleteUser(userId)
+      .subscribe((result) => {
+        this.getUserDetails();
+      });
+  }
 }

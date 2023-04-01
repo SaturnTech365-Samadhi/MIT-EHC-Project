@@ -97,7 +97,6 @@ export class HttpClientAdapterService {
     if (!headers) {
       headers = {};
     }
-    this.addKeyValue(headers, 'Authorization', `Bearer ${this.token}`);
     this.addKeyValue(headers, 'Content-Type', 'application/json');
     return this._http.delete(url, { headers: headers, params: queryParameter, body: bodyParameter }).pipe(
       catchError(this.handleError)
