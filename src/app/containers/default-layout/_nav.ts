@@ -18,12 +18,12 @@ export const navItems: INavData[] = [
   // },
   {
     name: 'Farmer',
-    url: '/farmer',
+    url: '/login',
     iconComponent: { name: 'cil-drop' }
   },
   {
     name: 'Admin',
-    url: '/admin',
+    url: '/login',
     iconComponent: { name: 'cil-drop' }
   },
   // {s
