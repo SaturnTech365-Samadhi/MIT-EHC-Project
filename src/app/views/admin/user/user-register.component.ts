@@ -39,7 +39,7 @@ console.log(form.value.TelNo);
       ZoneID:"2"
    }
 
-    this.adminService.register(data)
+    this.adminService.registerUser(data)
     
       .subscribe((result) => {
         console.log(data);

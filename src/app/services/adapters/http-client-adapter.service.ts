@@ -48,7 +48,6 @@ export class HttpClientAdapterService {
     if (!headers) {
       headers = {};
     }
-    this.addKeyValue(headers, 'Authorization', `Bearer ${this.token}`);
     return this._http.get(url, { headers: headers, params: queryParameter }).pipe(
       catchError(this.handleError)
     );

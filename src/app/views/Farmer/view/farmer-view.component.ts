@@ -15,40 +15,38 @@ export class FarmerViewComponent implements OnInit {
     
   }
 
-  // onSubmit(form: any) {
-  //   this.customStylesValidated = true;
-  //   if (!form.invalid) {
-  //     var isActive = false;
-  //     if (form.value.isActive != "") {
-  //       isActive = true;
-  //     }
-  //   }
-  //   var data :{
-  //     UserID:"1",
-  //     ZoneID:"1",
-  //     Message:"Unusual incident detected!"
-  //   }
+  onSubmit(form: any) {
+    this.customStylesValidated = true;
+    if (!form.invalid) {
+      var isActive = false;
+      if (form.value.isActive != "") {
+        isActive = true;
+      }
+    }
+    var data ={
+      UserID:"2",
+      ZoneID:"3",
+      Message:form.value.Message
+    }
 
-  //   this.adminService.AddEmergency(data)
+    this.adminService.addEmergency(data)
     
-  //     .subscribe((result) => {
-  //       console.log(data);
-  //       if (result) {
-  //         form.reset();
-  //         this.customStylesValidated = false;
-  //         alert("success");
-  //       } else {
-  //         alert("failed");
-  //       }
-  //     });
+      .subscribe((result) => {
+        console.log(data);
+        if (result) {
+          form.reset();
+          this.customStylesValidated = false;
+          alert("success");
+        } else {
+          alert("failed");
+        }
+      });
 
-  //   }
-  // }
+    }
 
-
-  // onReset() {
-  //   this.customStylesValidated = false;
-  // }
+  onReset() {
+    this.customStylesValidated = false;
+  }
   
 
 }

@@ -45,41 +45,41 @@ export class ZoneRegisterComponent implements OnInit {
     this.visible3 = event;
   }
 
-  onZoneSubmit(form:any){
+//   onZoneSubmit(form:any){
 
-    var data ={
-      ZoneID : form.value.ZoneID,
-      ZoneName : form.value.ZoneName,
-    }
+//     var data ={
+//       ZoneID : form.value.ZoneID,
+//       ZoneName : form.value.ZoneName,
+//     }
     
-  }
+//   }
 
 
 
 
-  
-  saveCamera() {
-    const cameraData = {
-      CameraID: this.cameraId,
-      SerialNo: this.serialNo,
-      ModelNo: this.modelNo,
-      ZoneID: this.zoneId
-    };
-    this.adminService.addCamera(cameraData).subscribe((response) => {
-      console.log(response);
-    });
-    this.toggleLiveDemo1(); // close the modal
-  }
-  
-//   register(){
-//     this.adminService.register(this.data)
-//     .subscribe((result) => {
-//       if (result) {
-//         console.log(result);
-//         alert("success");
-//       } else {
-//         alert("failed");
-//       }
+
+//   saveCamera() {
+//     const cameraData = {
+//       CameraID: this.cameraId,
+//       SerialNo: this.serialNo,
+//       ModelNo: this.modelNo,
+//       ZoneID: this.zoneId
+//     };
+//     this.adminService.addCamera(cameraData).subscribe((response) => {
+//       console.log(response);
 //     });
-// }
+//     this.toggleLiveDemo1(); // close the modal
+//   }
+  
+// //   register(){
+// //     this.adminService.register(this.data)
+// //     .subscribe((result) => {
+// //       if (result) {
+// //         console.log(result);
+// //         alert("success");
+// //       } else {
+// //         alert("failed");
+// //       }
+// //     });
+// // }
 }

@@ -5,7 +5,7 @@
                 <strong>Create Zone</strong>
             </c-card-header>
             <c-card-body>
-                <form cForm #ZoneRegisterForm="ngForm" (ngSubmit)="onZoneSubmit(ZoneRegisterForm)" [validated]="customStylesValidated" class="row g-3 needs-validation">
+                <form cForm #ZoneRegisterForm="ngForm">
                     <c-col md="3">
                         <label cLabel>Zone Id</label>
                         <input cFormControl required type="text" name="ZoneId">

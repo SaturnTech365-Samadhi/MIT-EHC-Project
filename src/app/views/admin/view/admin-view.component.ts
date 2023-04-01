@@ -42,30 +42,33 @@ export class AdminViewComponent implements OnInit  {
   //  }
 
    getUserDetails() {
-    this.adminService.getUserDetails()
+    this.adminService.viewUser()
       .subscribe(data => {
         this.getUsers = data;
       });
    }
 
    getZoneDetails() {
-    this.adminService.getZoneDetails()
+    this.adminService.viewZone()
       .subscribe(data => {
+        console.log(data);
         this.getZones = data;
       });
    }
 
    getLogByUserDetails() {
-    this.adminService.getLogByUserDetails()
+    this.adminService.viewEmergency()
       .subscribe(data => {
+        console.log(data);
         this.getLogU = data;
       });
    }
 
    getLogBySysemDetails() {
-    this.adminService.getLogBySystemDetails()
-      .subscribe(data => {
-        this.getLogS = data;
+    this.adminService.viewDetection()
+      .subscribe(result => {
+        console.log(result);
+        this.getLogS = result;
       });
    }
 }

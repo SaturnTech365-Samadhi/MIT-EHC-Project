@@ -2,6 +2,118 @@
     <c-col xs="12">
         <c-card class="mb-12">
             <c-card-header class="horizontalHeader">
+                <c-col md="12">
+                    <strong>Log Details - Emergency notice by user</strong>     
+                </c-col>
+            </c-card-header>
+
+            <c-card-body>
+                <table [hover]="true" cTable [responsive]="true">
+                    <thead>
+                        <tr>
+                            <th scope="col">Log Id</th>
+                            <th >UserName</th>
+                            <th >Zone</th>
+                            <th >Message</th>
+                            <th >Timestamp</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let logU of getLogU">
+                            <th scope="row">{{logU.LogID}}</th>
+                            <td>{{logU.User_name}}</td>
+                            <td>{{logU.ZoneName}}</td>
+                            <td>{{logU.Message}}</td>
+                            <td>{{logU.LogTimeStamp}}</td>
+                            <td> 
+                                <button [active]="false" [color]="'warning'"  cButton
+                                    [disabled]="false" class="me-1 actionButton" size="sm">
+                                    Activate
+                                </button>
+                                <!-- <c-modal #verticallyCenteredModal alignment="center" id="verticallyCenteredModal">
+                                    <c-modal-body>
+                                      Activating......
+                                    </c-modal-body>
+                                      <button [cModalToggle]="verticallyCenteredModal.id" class="sm" cButton color="secondary">
+                                        Close
+                                      </button>
+                                  </c-modal> -->
+                                  
+                                <button [active]="false" [color]="'danger'" cButton
+                                    [disabled]="false" class="me-1 actionButton" size="sm">
+                                    Deactivate
+                                </button>
+                                <!-- <c-modal #verticallyCenteredModal2 alignment="center" id="verticallyCenteredModal2">
+                                    <c-modal-body>
+                                      Deactivating......
+                                    </c-modal-body>
+                                      <button [cModalToggle]="verticallyCenteredModal2.id" class="sm" cButton color="secondary">
+                                        Close
+                                      </button>
+                                  </c-modal> -->
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </c-card-body>
+        </c-card>
+    </c-col>
+</c-row>
+<br>
+<c-row ngPreserveWhitespaces>
+    <c-col xs="12">
+        <c-card class="mb-12">
+            <c-card-header class="horizontalHeader">
+                <c-col md="12">
+                    <strong>Log Details - Emergency notice by system</strong>     
+                </c-col>
+                
+            </c-card-header>
+
+            <c-card-body>
+                <table [hover]="true" cTable [responsive]="true">
+                    <thead>
+                        <tr>
+                            <th scope="col">Log Id</th>
+                            <th >Camera</th>
+                            <th >Zone</th>
+                            <th >Detection class</th>
+                            <th >Timestamp</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let logU of getLogS">
+                            <th scope="row">{{logU.DetectionID}}</th>
+                            <td>{{logU.CameraID}}</td>
+                            <td>{{logU.ZoneName}}</td>
+                            <td>{{logU.ClassName}}</td>
+                            <td>{{logU.DetectTimeStamp}}</td>
+                            <td> 
+                                <button [active]="false" [color]="'warning'"
+                                    [disabled]="false" cButton class="me-1 actionButton" size="sm">
+                                    Activate
+                                </button>
+                                <button [active]="false" [color]="'danger'"
+                                    [disabled]="false" cButton class="me-1 actionButton" size="sm">
+                                    Deactivate
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </c-card-body>
+        </c-card>
+    </c-col>
+</c-row>
+<br>
+
+
+<c-row ngPreserveWhitespaces>
+    <c-col xs="12">
+        <c-card class="mb-12">
+            <c-card-header class="horizontalHeader">
                 <c-col md="2">
                     <strong>User Details</strong>     
                 </c-col>
@@ -67,15 +179,15 @@
                         <tr>
                             <th scope="col">Id</th>
                             <th scope="col">Zone Name</th>
-                            <th scope="col">Zone Status</th>
+                            <th scope="col">Zone Area</th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let Zone of getZones">
-                            <th scope="row">{{Zone.id}}</th>
-                            <td>{{Zone.name}}</td>
-                            <td>{{Zone.status}}</td>
+                            <th scope="row">{{Zone.ZoneID}}</th>
+                            <td>{{Zone.ZoneName}}</td>
+                            <td>{{Zone.Area}}</td>
                             <td> 
                                 <button [active]="false" [color]="'warning'"
                                     [disabled]="false" cButton class="me-1 actionButton" size="sm">
@@ -94,95 +206,3 @@
     </c-col>
 </c-row>
 <br>
-<c-row ngPreserveWhitespaces>
-    <c-col xs="12">
-        <c-card class="mb-12">
-            <c-card-header class="horizontalHeader">
-                <c-col md="12">
-                    <strong>Log Details - Emergency notice by user</strong>     
-                </c-col>
-            </c-card-header>
-
-            <c-card-body>
-                <table [hover]="true" cTable [responsive]="true">
-                    <thead>
-                        <tr>
-                            <th scope="col">Log Id</th>
-                            <th >UserName</th>
-                            <th >Zone</th>
-                            <th >Message</th>
-                            <th >Timestamp</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let logU of getLogU">
-                            <th scope="row">{{logU.logId}}</th>
-                            <td>{{logU.username}}</td>
-                            <td>{{logU.zone}}</td>
-                            <td>{{logU.message}}</td>
-                            <td>{{logU.timestamp}}</td>
-                            <td> 
-                                <button [active]="false" [color]="'warning'"
-                                    [disabled]="false" cButton class="me-1 actionButton" size="sm">
-                                    Activate
-                                </button>
-                                <button [active]="false" [color]="'danger'"
-                                    [disabled]="false" cButton class="me-1 actionButton" size="sm">
-                                    Deactivate
-                                </button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </c-card-body>
-        </c-card>
-    </c-col>
-</c-row>
-<br>
-<c-row ngPreserveWhitespaces>
-    <c-col xs="12">
-        <c-card class="mb-12">
-            <c-card-header class="horizontalHeader">
-                <c-col md="12">
-                    <strong>Log Details - Emergency notice by system</strong>     
-                </c-col>
-                
-            </c-card-header>
-
-            <c-card-body>
-                <table [hover]="true" cTable [responsive]="true">
-                    <thead>
-                        <tr>
-                            <th scope="col">Log Id</th>
-                            <th >Camera Id</th>
-                            <th >Zone</th>
-                            <th >Message</th>
-                            <th >Timestamp</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let logU of getLogS">
-                            <th scope="row">{{logU.logId}}</th>
-                            <td>{{logU.cameraId}}</td>
-                            <td>{{logU.zone}}</td>
-                            <td>{{logU.message}}</td>
-                            <td>{{logU.timestamp}}</td>
-                            <td> 
-                                <button [active]="false" [color]="'warning'"
-                                    [disabled]="false" cButton class="me-1 actionButton" size="sm">
-                                    Activate
-                                </button>
-                                <button [active]="false" [color]="'danger'"
-                                    [disabled]="false" cButton class="me-1 actionButton" size="sm">
-                                    Deactivate
-                                </button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </c-card-body>
-        </c-card>
-    </c-col>
-</c-row>

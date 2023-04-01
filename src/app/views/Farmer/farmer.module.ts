@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { FarmerRoutingModule } from './farmer-routing.module';
 import { FarmerViewComponent } from './view/farmer-view.component';
 
-import { ImgModule, ProgressModule, SpinnerModule, TableModule, UtilitiesModule } from '@coreui/angular';
+import { AvatarModule, ButtonGroupModule, ButtonModule, CardModule, FormModule, GridModule, ImgModule, ModalModule, NavModule, ProgressModule, SpinnerModule, TableModule, TabsModule, UtilitiesModule } from '@coreui/angular';
 import { ChartjsModule } from '@coreui/angular-chartjs';
 
 import { HttpClientModule } from '@angular/common/http';
 import { VideoStreamingModule } from '../videoStreaming/videoStreaming.module'
+import { IconModule } from '@coreui/icons-angular';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,6 @@ import { VideoStreamingModule } from '../videoStreaming/videoStreaming.module'
   imports: [
     CommonModule,
     FarmerRoutingModule,
-
     ProgressModule,
     SpinnerModule,
     TableModule,
@@ -25,6 +26,22 @@ import { VideoStreamingModule } from '../videoStreaming/videoStreaming.module'
     ChartjsModule,
     HttpClientModule,
     VideoStreamingModule,
+    NavModule, 
+    TabsModule,
+    ButtonModule,
+    CardModule,
+    IconModule,
+    GridModule,
+    ReactiveFormsModule,
+    ButtonModule,
+    FormModule,
+    ButtonGroupModule,
+    ChartjsModule,
+    AvatarModule,
+    HttpClientModule,
+    ModalModule,
+    FormsModule
+    
   ]
 })
 export class FarmerModule { }
