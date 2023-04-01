@@ -24,8 +24,8 @@ export class FarmerViewComponent implements OnInit {
       }
     }
     var data ={
-      UserID:"2",
-      ZoneID:"3",
+      UserID:"6",
+      ZoneID:"1",
       Message:form.value.Message
     }
 

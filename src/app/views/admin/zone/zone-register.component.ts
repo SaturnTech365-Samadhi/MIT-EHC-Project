@@ -51,7 +51,7 @@ export class ZoneRegisterComponent implements OnInit {
       }
   console.log(form.value.TelNo);
       var data = {
-        //UserID :form.value.
+        ZoneID :"13",
         ZoneName:form.value.ZoneName,
         Area:form.value.Area,
      }
@@ -59,7 +59,7 @@ export class ZoneRegisterComponent implements OnInit {
       this.adminService.registerUser(data)
       
         .subscribe((result) => {
-          console.log(data);
+          console.log(result);
           if (result) {
             form.reset();
             this.customStylesValidated = false;
